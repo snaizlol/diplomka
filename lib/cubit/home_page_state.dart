@@ -1,7 +1,18 @@
-class HomePageState {}
+import 'package:diplomka/entities/pub_entity.dart';
 
-class HomePageStateLoading extends HomePageState {}
+class HomePageState {
+  HomePageState({required this.list});
+  final List<PubEntity> list;
+}
 
-class HomePageStateLoaded extends HomePageState {}
+class HomePageStateLoading extends HomePageState {
+  HomePageStateLoading() : super(list: []);
+}
 
-class HomePageStateError extends HomePageState {}
+class HomePageStateLoaded extends HomePageState {
+  HomePageStateLoaded({required super.list});
+}
+
+class HomePageStateError extends HomePageState {
+  HomePageStateError() : super(list: []);
+}

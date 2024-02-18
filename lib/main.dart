@@ -1,9 +1,10 @@
+import 'package:diplomka/entities/di.dart';
 import 'package:diplomka/entities/router/router.dart';
-import 'package:diplomka/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
+  register();
 }
 
 class MainApp extends StatelessWidget {
