@@ -1,4 +1,4 @@
-import 'package:diplomka/cubit/home_page_state.dart';
+import 'package:diplomka/cubit/home_page/home_page_state.dart';
 import 'package:diplomka/entities/fotbalek_entity.dart';
 import 'package:diplomka/entities/pub_entity.dart';
 import 'package:diplomka/entities/table_entity.dart';

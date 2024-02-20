@@ -1,4 +1,5 @@
 import 'package:diplomka/pages/articles_page.dart';
+import 'package:diplomka/pages/detail_page.dart';
 import 'package:diplomka/pages/home_page.dart';
 import 'package:diplomka/pages/initial_page.dart';
 import 'package:diplomka/pages/search_page.dart';
@@ -25,7 +26,7 @@ class AppNavigation {
       routes: [
         StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
-            return HomePageContentView(
+            return InitialPage(
               navigationShell: navigationShell,
             );
           },
@@ -37,7 +38,7 @@ class AppNavigation {
                   path: '/home',
                   name: 'Home',
                   builder: (context, state) {
-                    return InitialPage(
+                    return HomePage(
                       key: state.pageKey,
                     );
                   },
@@ -48,14 +49,23 @@ class AppNavigation {
               navigatorKey: _rootNavigatorSearch,
               routes: [
                 GoRoute(
-                  path: '/search',
-                  name: 'Search',
-                  builder: (context, state) {
-                    return SearchPage(
-                      key: state.pageKey,
-                    );
-                  },
-                ),
+                    path: '/search',
+                    name: 'Search',
+                    builder: (context, state) {
+                      return SearchPage(
+                        key: state.pageKey,
+                      );
+                    },
+                    routes: [
+                      GoRoute(
+                        name: DetailPage.routeName,
+                        path: DetailPage.routePath,
+                        builder: (context, state) => DetailPage(
+                          key: state.pageKey,
+                          id: int.tryParse('${state.pathParameters['id']}'),
+                        ),
+                      )
+                    ]),
               ],
             ),
             StatefulShellBranch(

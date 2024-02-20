@@ -1,1 +1,3 @@
-abstract interface class FotbalkeeRepository {}
+abstract interface class FotbalkeeRepository {
+  getById(int id);
+}

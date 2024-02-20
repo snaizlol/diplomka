@@ -7,7 +7,7 @@ class PubMockupRepository {
     PubEntity(
       id: 0,
       name: 'Klubovna',
-      adress: 'General',
+      adress: 'Generala Piky',
       rating: 4,
       cooks: true,
       beers: [BeerEntity(price: 40, name: 'Kozel')],
@@ -15,9 +15,9 @@ class PubMockupRepository {
     ),
     PubEntity(
       id: 1,
-      name: 'Klubovna',
-      adress: 'General',
-      rating: 4,
+      name: 'Tecka',
+      adress: 'Americka',
+      rating: 2,
       cooks: true,
       beers: [BeerEntity(price: 40, name: 'Kozel')],
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
