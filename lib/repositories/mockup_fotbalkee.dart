@@ -5,6 +5,7 @@ import 'package:diplomka/entities/table_entity.dart';
 class PubMockupRepository {
   List<PubEntity> listOfPubs = [
     PubEntity(
+      id: 0,
       name: 'Klubovna',
       adress: 'General',
       rating: 4,
@@ -13,6 +14,7 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
     PubEntity(
+      id: 1,
       name: 'Klubovna',
       adress: 'General',
       rating: 4,

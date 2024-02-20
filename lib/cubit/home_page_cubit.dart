@@ -10,7 +10,7 @@ class HomePageCubit extends Cubit<HomePageState> {
 
   PubMockupRepository repo;
 
-  Future<void> load() async {
+  load() {
     emit(
       HomePageStateLoading(),
     );
@@ -30,6 +30,7 @@ class HomePageCubit extends Cubit<HomePageState> {
   addPub() {
     repo.addPub(
       PubEntity(
+        id: repo.listOfPubs.length + 1,
         name: 'Klubovna',
         adress: 'General',
         rating: 4,
@@ -40,4 +41,6 @@ class HomePageCubit extends Cubit<HomePageState> {
     );
     emit(HomePageStateLoaded(list: repo.listOfPubs));
   }
+
+  randomNumber(int from, int to) {}
 }

@@ -3,6 +3,7 @@ import 'package:diplomka/entities/table_entity.dart';
 
 class PubEntity {
   String name;
+  int id;
   String adress;
   double rating;
   bool? cooks;
@@ -10,6 +11,7 @@ class PubEntity {
   FotbalekEntity fotbalek;
 
   PubEntity({
+    required this.id,
     required this.name,
     required this.adress,
     required this.rating,
