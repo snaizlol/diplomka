@@ -1,6 +1,5 @@
 import 'package:diplomka/entities/fotbalek_entity.dart';
 import 'package:diplomka/entities/pub_entity.dart';
-import 'package:diplomka/entities/table_entity.dart';
 
 class DetailPageState {
   DetailPageState({required this.id, required this.pub});
@@ -25,5 +24,8 @@ class DetailPageStateLoading extends DetailPageState {
 }
 
 class DetailPageStateLoaded extends DetailPageState {
-  DetailPageStateLoaded({required super.id, required super.pub});
+  DetailPageStateLoaded({
+    required super.id,
+    required super.pub,
+  });
 }

@@ -8,13 +8,27 @@ import 'package:get_it/get_it.dart';
 GetIt getIt = GetIt.instance;
 
 void register() {
-  getIt.registerSingleton<PubMockupRepository>(PubMockupRepository());
+  getIt.registerSingleton<PubMockupRepository>(
+    PubMockupRepository(),
+  );
   getIt.registerSingleton<FotbalkeeRepository>(
-      FotbalkeeRepositoryImplementation(PubMockupRepository()));
+    FotbalkeeRepositoryImplementation(
+      PubMockupRepository(),
+    ),
+  );
   getIt.registerSingleton<FotbalkeeRepositoryImplementation>(
-      FotbalkeeRepositoryImplementation(PubMockupRepository()));
+    FotbalkeeRepositoryImplementation(
+      PubMockupRepository(),
+    ),
+  );
   getIt.registerFactory<DetailPageCubit>(
-      () => DetailPageCubit(getIt.get<FotbalkeeRepository>()));
+    () => DetailPageCubit(
+      getIt.get<FotbalkeeRepository>(),
+    ),
+  );
   getIt.registerFactory<HomePageCubit>(
-      () => HomePageCubit(PubMockupRepository()));
+    () => HomePageCubit(
+      PubMockupRepository(),
+    ),
+  );
 }

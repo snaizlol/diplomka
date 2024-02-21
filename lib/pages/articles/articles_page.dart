@@ -7,10 +7,13 @@ class ArticlesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Articles Page'),
+        title: const Text('Articles Page'),
       ),
-      backgroundColor: Colors.red,
-      body: Center(child: Text('Articles Page')),
+      body: const Center(
+        child: Text(
+          'Articles Page',
+        ),
+      ),
     );
   }
 }

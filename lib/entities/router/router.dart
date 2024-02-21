@@ -1,9 +1,8 @@
-import 'package:diplomka/pages/articles_page.dart';
-import 'package:diplomka/pages/detail_page.dart';
-import 'package:diplomka/pages/home_page.dart';
-import 'package:diplomka/pages/initial_page.dart';
-import 'package:diplomka/pages/search_page.dart';
-import 'package:diplomka/widgets/home_page_content_view.dart';
+import 'package:diplomka/pages/articles/articles_page.dart';
+import 'package:diplomka/pages/detail/detail_page.dart';
+import 'package:diplomka/pages/home/home_page.dart';
+import 'package:diplomka/pages/initial/initial_page.dart';
+import 'package:diplomka/pages/search/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

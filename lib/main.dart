@@ -30,7 +30,6 @@ class FotbalkeeThemeExtension extends ThemeExtension<FotbalkeeThemeExtension> {
   @override
   ThemeExtension<FotbalkeeThemeExtension> lerp(
       covariant ThemeExtension<FotbalkeeThemeExtension>? other, double t) {
-    // TODO: implement lerp
     throw UnimplementedError();
   }
 }

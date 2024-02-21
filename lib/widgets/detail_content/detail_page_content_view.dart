@@ -16,16 +16,14 @@ class DetailPageContentView extends StatelessWidget {
           } else if (state is DetailPageStateLoaded) {
             return Scaffold(
               appBar: AppBar(
-                title: Text('Detail Page'),
+                title: const Text('Detail Page'),
               ),
-              backgroundColor: Colors.amber,
-              body: Center(
-                  child: Container(
-                child: Text('${state.pub.name}'),
-              )),
+              backgroundColor: Color.fromARGB(255, 239, 239, 239),
+              body: Center(child: Text(state.pub.name)),
             );
-          } else
-            return Placeholder();
+          } else {
+            return const Placeholder();
+          }
         });
       },
     );

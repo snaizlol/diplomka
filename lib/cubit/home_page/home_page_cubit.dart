@@ -35,11 +35,20 @@ class HomePageCubit extends Cubit<HomePageState> {
         adress: 'General',
         rating: 4,
         cooks: true,
-        beers: [BeerEntity(price: 40, name: 'Kozel')],
+        beers: [
+          BeerEntity(
+            price: 40,
+            name: 'Kozel',
+          ),
+        ],
         fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
       ),
     );
-    emit(HomePageStateLoaded(list: repo.listOfPubs));
+    emit(
+      HomePageStateLoaded(
+        list: repo.listOfPubs,
+      ),
+    );
   }
 
   randomNumber(int from, int to) {}

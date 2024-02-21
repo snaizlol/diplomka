@@ -7,11 +7,14 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search Page'),
+        title: const Text(
+          'Search Page',
+        ),
       ),
-      backgroundColor: Colors.blue,
-      body: Center(
-        child: Text('Search page'),
+      body: const Center(
+        child: Text(
+          'Search page',
+        ),
       ),
     );
   }
