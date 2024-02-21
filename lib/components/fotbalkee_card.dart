@@ -21,26 +21,45 @@ class CardWidget extends StatelessWidget {
       height: 100,
       child: GestureDetector(
         onTap: callback,
-        child: Row(
-          children: [
-            DecoratedBox(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            color: Colors.grey,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Row(
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                child: Image.network(
+                  'https://picsum.photos/200/',
+                  errorBuilder: (context, error, stackTrace) {
+                    return const Placeholder();
+                  },
+                ),
               ),
-              child: Image.network('https://i.pravatar.cc/300/$index'),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(name),
-                Text(adress),
-                Text('$rating'),
-              ],
-            )
-          ],
+              const SizedBox(
+                width: 10,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(name),
+                  Text(adress),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.star,
+                        color: Colors.amber,
+                      ),
+                      Text('$rating')
+                    ],
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

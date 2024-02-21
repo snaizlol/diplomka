@@ -1,3 +1,4 @@
+import 'package:diplomka/widgets/articles_content/articles_content_view.dart';
 import 'package:flutter/material.dart';
 
 class ArticlesPage extends StatelessWidget {
@@ -5,15 +6,6 @@ class ArticlesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Articles Page'),
-      ),
-      body: const Center(
-        child: Text(
-          'Articles Page',
-        ),
-      ),
-    );
+    return const ArticlesContentView();
   }
 }

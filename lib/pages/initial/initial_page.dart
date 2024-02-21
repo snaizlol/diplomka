@@ -23,6 +23,7 @@ class _InitialPageState extends State<InitialPage> {
       body: widget.navigationShell,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        selectedItemColor: Colors.black,
         items: const [
           BottomNavigationBarItem(
             label: 'Home',

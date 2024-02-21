@@ -1,3 +1,4 @@
+import 'package:diplomka/widgets/search_content/search_content_view.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {
@@ -5,17 +6,6 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Search Page',
-        ),
-      ),
-      body: const Center(
-        child: Text(
-          'Search page',
-        ),
-      ),
-    );
+    return const SearchContentView();
   }
 }
