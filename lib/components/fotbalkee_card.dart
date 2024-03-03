@@ -23,16 +23,16 @@ class CardWidget extends StatelessWidget {
         onTap: callback,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color: const Color.fromARGB(255, 244, 244, 244),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Row(
             children: [
-              Container(
+              SizedBox(
                 height: 100,
                 width: 100,
                 child: Image.network(
-                  'https://picsum.photos/200/',
+                  'https://picsum.photos/200',
                   errorBuilder: (context, error, stackTrace) {
                     return const Placeholder();
                   },

@@ -7,6 +7,7 @@ class SearchContentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(100, 243, 218, 189),
         title: const Text(
           'Search Page',
         ),

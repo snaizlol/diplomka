@@ -19,47 +19,63 @@ class HomePageContentView extends StatefulWidget {
 class _HomePageContentViewState extends State<HomePageContentView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(100, 243, 218, 189),
-        title: Text(
-          'Home Page',
-        ),
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
-          child: BlocBuilder<HomePageCubit, HomePageState>(
-            builder: (context, state) {
-              return ListView.separated(
-                shrinkWrap: true,
-                separatorBuilder: (context, index) {
-                  return const SizedBox(
-                    height: 20,
-                  );
-                },
-                itemCount: state.list.length,
-                itemBuilder: (context, index) {
-                  return CardWidget(
-                    name: state.list[index].name,
-                    rating: state.list[index].rating,
-                    adress: state.list[index].adress,
-                    index: index,
-                    callback: () {
-                      context.pushNamed(
-                        DetailPage.routeName,
-                        pathParameters: {
-                          'id': (state.list[index].id).toString(),
-                        },
-                      );
-                    },
-                  );
-                },
+    return BlocBuilder<HomePageCubit, HomePageState>(
+      builder: (context, state) {
+        return Builder(
+          builder: (context) {
+            if (state is HomePageStateLoading) {
+              const Center(
+                child: CircularProgressIndicator(),
               );
-            },
-          ),
-        ),
-      ),
+            } else if (state is HomePageStateLoaded) {
+              return Scaffold(
+                appBar: AppBar(
+                  backgroundColor: const Color.fromARGB(100, 243, 218, 189),
+                  title: const Text(
+                    'Home Page',
+                  ),
+                ),
+                body: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40, vertical: 40),
+                    child: BlocBuilder<HomePageCubit, HomePageState>(
+                      builder: (context, state) {
+                        return ListView.separated(
+                          shrinkWrap: true,
+                          separatorBuilder: (context, index) {
+                            return const SizedBox(
+                              height: 20,
+                            );
+                          },
+                          itemCount: state.list.length,
+                          itemBuilder: (context, index) {
+                            return CardWidget(
+                              name: state.list[index].name,
+                              rating: state.list[index].rating,
+                              adress: state.list[index].adress,
+                              index: index,
+                              callback: () {
+                                context.pushNamed(
+                                  DetailPage.routeName,
+                                  pathParameters: {
+                                    'id': (state.list[index].id).toString(),
+                                  },
+                                );
+                              },
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              );
+            }
+            return Placeholder();
+          },
+        );
+      },
     );
   }
 }
