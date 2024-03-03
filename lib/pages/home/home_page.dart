@@ -1,4 +1,4 @@
-import 'package:diplomka/cubit/home_page/home_page_cubit.dart';
+import 'package:diplomka/cubit/home_page_cubit/home_page_cubit.dart';
 import 'package:diplomka/entities/di.dart';
 import 'package:diplomka/widgets/home_content/home_page_content_view.dart';
 import 'package:flutter/material.dart';

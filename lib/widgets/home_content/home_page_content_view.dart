@@ -1,7 +1,7 @@
 import 'package:diplomka/components/fotbalkee_card.dart';
 import 'package:diplomka/constants/constants.dart';
-import 'package:diplomka/cubit/home_page/home_page_cubit.dart';
-import 'package:diplomka/cubit/home_page/home_page_state.dart';
+import 'package:diplomka/cubit/home_page_cubit/home_page_cubit.dart';
+import 'package:diplomka/cubit/home_page_cubit/home_page_state.dart';
 import 'package:diplomka/pages/detail/detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

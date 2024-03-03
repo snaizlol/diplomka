@@ -1,5 +1,5 @@
-import 'package:diplomka/cubit/detail_page/detail_page_cubit.dart';
-import 'package:diplomka/cubit/detail_page/detail_page_state.dart';
+import 'package:diplomka/cubit/detail_page_cubit/detail_page_cubit.dart';
+import 'package:diplomka/cubit/detail_page_cubit/detail_page_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

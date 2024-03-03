@@ -6,8 +6,8 @@ class ArticlesRepositoryImplementation implements ArticlesRepository {
   final ArticlesMockupRepository repo;
   @override
   getAll() {
-    // TODO: implement getAll
-    throw UnimplementedError();
+    final data = repo.list;
+    return data;
   }
 
   @override

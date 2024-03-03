@@ -26,7 +26,7 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
     PubEntity(
-      id: 1,
+      id: 2,
       name: 'Woodoo',
       adress: 'Zizkovska',
       rating: 2,
@@ -35,7 +35,7 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
     PubEntity(
-      id: 1,
+      id: 3,
       name: 'Oaza',
       adress: 'Thakurova',
       rating: 2,
@@ -44,7 +44,7 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
     PubEntity(
-      id: 1,
+      id: 4,
       name: 'Zazemi',
       adress: 'Michalska',
       rating: 2,
@@ -53,7 +53,7 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
     PubEntity(
-      id: 1,
+      id: 5,
       name: 'Konev',
       adress: 'Bartlomejska',
       rating: 4,

@@ -1,5 +1,6 @@
-import 'package:diplomka/cubit/detail_page/detail_page_cubit.dart';
-import 'package:diplomka/cubit/home_page/home_page_cubit.dart';
+import 'package:diplomka/cubit/articles_cubit/articles_page_cubit.dart';
+import 'package:diplomka/cubit/detail_page_cubit/detail_page_cubit.dart';
+import 'package:diplomka/cubit/home_page_cubit/home_page_cubit.dart';
 import 'package:diplomka/repositories/articles_repo/aritcles_repository.dart';
 import 'package:diplomka/repositories/articles_repo/articles_repository_implementation.dart';
 import 'package:diplomka/repositories/articles_repo/mockup_articles.dart';
@@ -19,11 +20,11 @@ void register() {
       PubMockupRepository(),
     ),
   );
-  // getIt.registerSingleton<FotbalkeeRepositoryImplementation>(
-  //   FotbalkeeRepositoryImplementation(
-  //     PubMockupRepository(),
-  //   ),
-  // );
+  getIt.registerSingleton<FotbalkeeRepositoryImplementation>(
+    FotbalkeeRepositoryImplementation(
+      PubMockupRepository(),
+    ),
+  );
   getIt.registerFactory<DetailPageCubit>(
     () => DetailPageCubit(
       getIt.get<FotbalkeeRepository>(),
@@ -34,6 +35,8 @@ void register() {
       getIt.get<FotbalkeeRepository>(),
     ),
   );
+  getIt.registerFactory<ArticlesPageCubit>(
+      () => ArticlesPageCubit(getIt.get<ArticlesRepository>()));
   getIt.registerSingleton<ArticlesMockupRepository>(ArticlesMockupRepository());
   getIt.registerSingleton<ArticlesRepository>(
       ArticlesRepositoryImplementation(ArticlesMockupRepository()));
