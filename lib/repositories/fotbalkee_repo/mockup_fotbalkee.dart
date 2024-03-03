@@ -23,7 +23,7 @@ class PubMockupRepository {
       rating: 2,
       cooks: false,
       beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
+      fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
     PubEntity(
       id: 2,
@@ -32,7 +32,7 @@ class PubMockupRepository {
       rating: 2,
       cooks: true,
       beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
+      fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
     PubEntity(
       id: 3,
@@ -41,7 +41,7 @@ class PubMockupRepository {
       rating: 2,
       cooks: false,
       beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
+      fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
     PubEntity(
       id: 4,
@@ -50,7 +50,7 @@ class PubMockupRepository {
       rating: 2,
       cooks: false,
       beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
+      fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
     PubEntity(
       id: 5,
@@ -59,7 +59,7 @@ class PubMockupRepository {
       rating: 4,
       cooks: false,
       beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
+      fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
   ];
 
