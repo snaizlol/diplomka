@@ -1,4 +1,3 @@
-import 'package:diplomka/entities/fotbalek_entity.dart';
 import 'package:diplomka/entities/pub_entity.dart';
 import 'package:diplomka/repositories/fotbalkee_repo/fotbalkee_repository.dart';
 import 'package:diplomka/repositories/fotbalkee_repo/mockup_fotbalkee.dart';
@@ -38,7 +37,6 @@ class FotbalkeeRepositoryImplementation implements FotbalkeeRepository {
   getByName(String tableName) {
     List<PubEntity> tables = [];
     for (var table in repo.listOfPubs) {
-      print(table.fotbalek.brand);
       if (table.fotbalek.brand == tableName) {
         tables.add(table);
       }

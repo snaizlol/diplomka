@@ -1,5 +1,4 @@
 import 'package:diplomka/entities/article_entity.dart';
-import 'package:diplomka/pages/articles/articles_page.dart';
 
 class ArticlesPageState {}
 

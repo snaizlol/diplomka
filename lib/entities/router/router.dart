@@ -1,4 +1,5 @@
 import 'package:diplomka/pages/articles/articles_page.dart';
+import 'package:diplomka/pages/create_match/create_match_page.dart';
 import 'package:diplomka/pages/detail/detail_page.dart';
 import 'package:diplomka/pages/home/home_page.dart';
 import 'package:diplomka/pages/initial/initial_page.dart';
@@ -41,6 +42,16 @@ class AppNavigation {
                       key: state.pageKey,
                     );
                   },
+                  routes: [
+                    GoRoute(
+                      name: DetailPage.routeName,
+                      path: DetailPage.routePath,
+                      builder: (context, state) => DetailPage(
+                        key: state.pageKey,
+                        id: int.tryParse('${state.pathParameters['id']}'),
+                      ),
+                    )
+                  ],
                 ),
               ],
             ),
@@ -48,23 +59,25 @@ class AppNavigation {
               navigatorKey: _rootNavigatorSearch,
               routes: [
                 GoRoute(
-                    path: '/search',
-                    name: 'Search',
-                    builder: (context, state) {
-                      return SearchPage(
-                        key: state.pageKey,
-                      );
-                    },
-                    routes: [
-                      GoRoute(
-                        name: DetailPage.routeName,
-                        path: DetailPage.routePath,
-                        builder: (context, state) => DetailPage(
+                  path: '/search',
+                  name: 'Search',
+                  builder: (context, state) {
+                    return SearchPage(
+                      key: state.pageKey,
+                    );
+                  },
+                  routes: [
+                    GoRoute(
+                      path: CreateMatchPage.routePath,
+                      name: CreateMatchPage.routeName,
+                      builder: (context, state) {
+                        return CreateMatchPage(
                           key: state.pageKey,
-                          id: int.tryParse('${state.pathParameters['id']}'),
-                        ),
-                      )
-                    ]),
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ],
             ),
             StatefulShellBranch(
@@ -80,7 +93,7 @@ class AppNavigation {
                   },
                 ),
               ],
-            )
+            ),
           ],
         ),
       ]);

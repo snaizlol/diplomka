@@ -7,8 +7,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key, this.id});
 
-  static const routeName = 'ingredient';
-  static const routePath = 'ingredient/detail/:id';
+  static const routeName = 'hospoda';
+  static const routePath = 'hospoda/detail/:id';
 
   final int? id;
 

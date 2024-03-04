@@ -1,7 +1,6 @@
 import 'package:diplomka/components/article_card.dart';
 import 'package:diplomka/cubit/articles_cubit/articles_page_cubit.dart';
 import 'package:diplomka/cubit/articles_cubit/articles_page_state.dart';
-import 'package:diplomka/pages/articles/articles_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -29,8 +28,9 @@ class ArticlesContentView extends StatelessWidget {
                       title: state.list[index].title);
                 },
               );
-            } else
-              return Placeholder();
+            } else {
+              return const Placeholder();
+            }
           },
         ),
       ),
