@@ -5,18 +5,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MatchDetailPage extends StatelessWidget {
-  const MatchDetailPage({super.key, this.id});
+  const MatchDetailPage({super.key, required this.id});
 
   static const routeName = 'match';
   static const routePath = 'match/detail/:id';
 
-  final int? id;
+  final String id;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt.get<MatchDetailCubit>()..load(id ?? 0),
+      create: (context) => getIt.get<MatchDetailCubit>()..load(id),
       child: MatchDetailContentView(
-        index: id ?? 0,
+        id: id,
       ),
     );
   }

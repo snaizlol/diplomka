@@ -8,7 +8,7 @@ class MatchesMockupRepository {
             teamName: 'Team 1',
             playerOneName: 'Michal',
             playerTwoName: 'Patrik'),
-        matchId: 0,
+        matchId: '0',
         teamOneGamesWon: 3,
         teamTwo: TeamEntity(
             teamName: 'Team 2', playerOneName: 'Dement', playerTwoName: 'Blb'),
@@ -16,7 +16,7 @@ class MatchesMockupRepository {
     MatchEntity(
         teamOne: TeamEntity(
             teamName: 'Roboti', playerOneName: 'Cert', playerTwoName: 'aijwdw'),
-        matchId: 1,
+        matchId: '1',
         teamOneGamesWon: 1,
         teamTwo: TeamEntity(
             teamName: 'Zviratka',

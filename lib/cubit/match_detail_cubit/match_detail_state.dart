@@ -17,7 +17,7 @@ class MatchDetailLoading extends MatchDetailState {
           matchInfo: MatchEntity(
             teamOne:
                 TeamEntity(teamName: '', playerOneName: '', playerTwoName: ''),
-            matchId: 0,
+            matchId: '0',
             teamOneGamesWon: 0,
             teamTwo:
                 TeamEntity(teamName: '', playerOneName: '', playerTwoName: ''),
@@ -41,7 +41,7 @@ class TeamOneScores extends MatchDetailState {
           matchInfo: MatchEntity(
             teamOne:
                 TeamEntity(teamName: '', playerOneName: '', playerTwoName: ''),
-            matchId: 0,
+            matchId: '0',
             teamOneGamesWon: 0,
             teamTwo:
                 TeamEntity(teamName: '', playerOneName: '', playerTwoName: ''),

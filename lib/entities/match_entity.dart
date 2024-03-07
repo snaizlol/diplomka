@@ -11,5 +11,5 @@ class MatchEntity {
   int teamTwoGamesWon;
   TeamEntity teamOne;
   TeamEntity teamTwo;
-  int matchId;
+  String matchId;
 }

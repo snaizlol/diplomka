@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class MatchDetailCubit extends Cubit<MatchDetailState> {
   MatchDetailCubit(this.repo) : super(MatchDetailLoading());
   MatchesRepository repo;
-  load(int id) {
+  load(String id) {
     emit(MatchDetailLoading());
 
     final MatchEntity getMatchInfo = repo.getMatchById(id);
@@ -18,7 +18,7 @@ class MatchDetailCubit extends Cubit<MatchDetailState> {
         teamTwoWins: getMatchInfo.teamTwoGamesWon));
   }
 
-  addWin(int id, int team) {
+  addWin(String id, int team) {
     final MatchEntity getMatchInfo = repo.getMatchById(id);
     if (team == 1) {
       repo.updateScorePlus(id, team);
@@ -37,7 +37,7 @@ class MatchDetailCubit extends Cubit<MatchDetailState> {
     }
   }
 
-  removeWin(int id, int team) {
+  removeWin(String id, int team) {
     final MatchEntity getMatchInfo = repo.getMatchById(id);
     if (team == 1) {
       if (getMatchInfo.teamOneGamesWon > 0) {

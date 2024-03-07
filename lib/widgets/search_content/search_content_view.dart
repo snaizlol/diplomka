@@ -39,7 +39,7 @@ class SearchContentView extends StatelessWidget {
                               context.pushNamed(
                                 MatchDetailPage.routeName,
                                 pathParameters: {
-                                  'id': (state.list[index].matchId).toString()
+                                  'id': (state.list[index].matchId)
                                 },
                               ).then((value) =>
                                   context.read<MatchCubit>()..load());

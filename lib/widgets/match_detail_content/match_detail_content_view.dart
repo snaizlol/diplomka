@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MatchDetailContentView extends StatelessWidget {
-  const MatchDetailContentView({super.key, required this.index});
+  const MatchDetailContentView({super.key, required this.id});
 
-  final int index;
+  final String id;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,14 +77,12 @@ class MatchDetailContentView extends StatelessWidget {
                     children: [
                       ElevatedButton(
                           onPressed: () {
-                            context.read<MatchDetailCubit>().addWin(index, 1);
+                            context.read<MatchDetailCubit>().addWin(id, 1);
                           },
                           child: Icon(Icons.add)),
                       ElevatedButton(
                           onPressed: () {
-                            context
-                                .read<MatchDetailCubit>()
-                                .removeWin(index, 1);
+                            context.read<MatchDetailCubit>().removeWin(id, 1);
                           },
                           child: Icon(Icons.remove)),
                     ],
@@ -93,14 +91,12 @@ class MatchDetailContentView extends StatelessWidget {
                     children: [
                       ElevatedButton(
                           onPressed: () {
-                            context.read<MatchDetailCubit>().addWin(index, 2);
+                            context.read<MatchDetailCubit>().addWin(id, 2);
                           },
                           child: Icon(Icons.add)),
                       ElevatedButton(
                           onPressed: () {
-                            context
-                                .read<MatchDetailCubit>()
-                                .removeWin(index, 2);
+                            context.read<MatchDetailCubit>().removeWin(id, 2);
                           },
                           child: Icon(Icons.remove)),
                     ],

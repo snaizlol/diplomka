@@ -82,7 +82,7 @@ class AppNavigation {
                       name: MatchDetailPage.routeName,
                       builder: (context, state) => MatchDetailPage(
                         key: state.pageKey,
-                        id: int.tryParse('${state.pathParameters['id']}'),
+                        id: state.pathParameters['id'] ?? '0',
                       ),
                     )
                   ],
