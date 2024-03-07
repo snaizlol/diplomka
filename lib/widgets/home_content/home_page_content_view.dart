@@ -40,8 +40,9 @@ class _HomePageContentViewState extends State<HomePageContentView>
               return Scaffold(
                 appBar: AppBar(
                   backgroundColor: const Color.fromARGB(100, 243, 218, 189),
-                  title: const Text(
+                  title: Text(
                     'Home Page',
+                    style: TextStyle(fontFamily: 'Roboto'),
                   ),
                 ),
                 body: Column(

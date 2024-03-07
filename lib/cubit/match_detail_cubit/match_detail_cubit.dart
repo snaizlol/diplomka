@@ -10,8 +10,7 @@ class MatchDetailCubit extends Cubit<MatchDetailState> {
     emit(MatchDetailLoading());
 
     final MatchEntity getMatchInfo = repo.getMatchById(id);
-    print(
-        'matchmatchmatchmatch ${getMatchInfo.matchId}  ${getMatchInfo.teamOne}');
+
     emit(MatchDetailLoaded(
         matchInfo: getMatchInfo,
         teamOneWins: getMatchInfo.teamOneGamesWon,
@@ -58,5 +57,9 @@ class MatchDetailCubit extends Cubit<MatchDetailState> {
             teamTwoWins: state.teamTwoWins));
       }
     }
+  }
+
+  deleteMatch(String matchId) {
+    repo.deleteMatch(matchId);
   }
 }

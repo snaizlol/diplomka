@@ -6,4 +6,5 @@ abstract interface class MatchesRepository {
   createMatch(TeamEntity team1, TeamEntity team2, String matchId) {}
   updateScorePlus(String id, int teamNumber) {}
   updateScoreMinus(String id, int teamNumber) {}
+  deleteMatch(String id) {}
 }

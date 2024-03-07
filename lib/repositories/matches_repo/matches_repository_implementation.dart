@@ -53,4 +53,9 @@ class MatchRepositoryImplementation implements MatchesRepository {
     final getMatch = repo.list.where((element) => element.matchId == id).first;
     return getMatch;
   }
+
+  @override
+  deleteMatch(String id) {
+    repo.list.removeWhere((element) => element.matchId == id);
+  }
 }

@@ -2,6 +2,7 @@ import 'package:diplomka/cubit/match_detail_cubit/match_detail_cubit.dart';
 import 'package:diplomka/cubit/match_detail_cubit/match_detail_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class MatchDetailContentView extends StatelessWidget {
   const MatchDetailContentView({super.key, required this.id});
@@ -11,7 +12,9 @@ class MatchDetailContentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Match info'),
+        title: Text(
+          'Match info',
+        ),
       ),
       body: BlocBuilder<MatchDetailCubit, MatchDetailState>(
           builder: (context, state) {
@@ -47,6 +50,8 @@ class MatchDetailContentView extends StatelessWidget {
                   ),
                 ],
               ),
+              Text(
+                  '${((state.teamOneWins / (state.teamOneWins + state.teamTwoWins)) * 100).toStringAsFixed(1)}% : ${((state.teamTwoWins / (state.teamOneWins + state.teamTwoWins)) * 100).toStringAsFixed(1)}% '),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -59,13 +64,18 @@ class MatchDetailContentView extends StatelessWidget {
                       )
                     ],
                   ),
+                  SizedBox(
+                    height: 100,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        state.matchInfo.teamOne.playerOneName,
+                        state.matchInfo.teamTwo.playerOneName,
                       ),
-                      Text(state.matchInfo.teamTwo.playerTwoName)
+                      Text(
+                        state.matchInfo.teamTwo.playerTwoName,
+                      )
                     ],
                   ),
                 ],
@@ -80,6 +90,9 @@ class MatchDetailContentView extends StatelessWidget {
                             context.read<MatchDetailCubit>().addWin(id, 1);
                           },
                           child: Icon(Icons.add)),
+                      SizedBox(
+                        width: 10,
+                      ),
                       ElevatedButton(
                           onPressed: () {
                             context.read<MatchDetailCubit>().removeWin(id, 1);
@@ -94,6 +107,9 @@ class MatchDetailContentView extends StatelessWidget {
                             context.read<MatchDetailCubit>().addWin(id, 2);
                           },
                           child: Icon(Icons.add)),
+                      SizedBox(
+                        width: 10,
+                      ),
                       ElevatedButton(
                           onPressed: () {
                             context.read<MatchDetailCubit>().removeWin(id, 2);
@@ -103,6 +119,15 @@ class MatchDetailContentView extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 50,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    context.read<MatchDetailCubit>().deleteMatch(id);
+                    context.pop();
+                  },
+                  child: Text('Delete match'))
             ],
           );
         } else

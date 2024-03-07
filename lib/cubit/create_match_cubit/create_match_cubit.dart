@@ -3,7 +3,6 @@ import 'package:diplomka/entities/team_entity.dart';
 import 'package:diplomka/repositories/matches_repo/matches_repository.dart';
 import 'package:diplomka/repositories/matches_repo/mockup_matches.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:uuid/v1.dart';
 import 'package:uuid/v4.dart';
 
 class CreateMatchCubit extends Cubit<CreateMatchState> {
