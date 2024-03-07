@@ -5,11 +5,23 @@ class MatchesMockupRepository {
   List<MatchEntity> list = [
     MatchEntity(
         teamOne: TeamEntity(
-            teamName: 'Draci', playerOneName: 'Cert', playerTwoName: 'Patrik'),
+            teamName: 'Team 1',
+            playerOneName: 'Michal',
+            playerTwoName: 'Patrik'),
         matchId: 0,
-        teamOneGamesWon: 0,
+        teamOneGamesWon: 3,
         teamTwo: TeamEntity(
-            teamName: 'Ptaci', playerOneName: 'Nekdo', playerTwoName: 'Neco'),
-        teamTwoGamesWon: 0)
+            teamName: 'Team 2', playerOneName: 'Dement', playerTwoName: 'Blb'),
+        teamTwoGamesWon: 2),
+    MatchEntity(
+        teamOne: TeamEntity(
+            teamName: 'Roboti', playerOneName: 'Cert', playerTwoName: 'aijwdw'),
+        matchId: 1,
+        teamOneGamesWon: 1,
+        teamTwo: TeamEntity(
+            teamName: 'Zviratka',
+            playerOneName: 'Neco',
+            playerTwoName: 'Jeden'),
+        teamTwoGamesWon: 1),
   ];
 }

@@ -9,14 +9,29 @@ class MatchRepositoryImplementation implements MatchesRepository {
   final MatchesMockupRepository repo;
 
   @override
-  updateScoreMinus(TeamEntity team, MatchEntity match) {}
+  updateScoreMinus(int id, int teamNumber) {
+    final getMatch = repo.list.where((element) => element.matchId == id);
+
+    if (teamNumber == 1) {
+      getMatch.first.teamOneGamesWon--;
+    } else {
+      getMatch.first.teamTwoGamesWon--;
+    }
+  }
 
   @override
-  updateScorePlus(TeamEntity team, MatchEntity match) {}
+  updateScorePlus(int id, int teamNumber) {
+    final getMatch = repo.list.where((element) => element.matchId == id);
+
+    if (teamNumber == 1) {
+      getMatch.first.teamOneGamesWon++;
+    } else {
+      getMatch.first.teamTwoGamesWon++;
+    }
+  }
 
   @override
   createMatch(TeamEntity team1, TeamEntity team2, int matchId) {
-    print('TEAMMMMMMMM${team1.playerOneName}');
     repo.list.add(
       MatchEntity(
         teamOne: team1,
@@ -31,5 +46,11 @@ class MatchRepositoryImplementation implements MatchesRepository {
   @override
   getMatches() {
     return repo.list;
+  }
+
+  @override
+  getMatchById(int id) {
+    final getMatch = repo.list.where((element) => element.matchId == id).first;
+    return getMatch;
   }
 }

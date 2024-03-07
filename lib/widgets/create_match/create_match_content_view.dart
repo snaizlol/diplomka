@@ -9,12 +9,12 @@ class CreateMatchContentView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController _teamOneName = TextEditingController();
-    final TextEditingController _teamOnePlayer1 = TextEditingController();
-    final TextEditingController _teamOnePlayer2 = TextEditingController();
-    final TextEditingController _teamTwoName = TextEditingController();
-    final TextEditingController _teamTwoPlayer1 = TextEditingController();
-    final TextEditingController _teamTwoPlayer2 = TextEditingController();
+    final TextEditingController teamOneName = TextEditingController();
+    final TextEditingController teamOnePlayer1 = TextEditingController();
+    final TextEditingController teamOnePlayer2 = TextEditingController();
+    final TextEditingController teamTwoName = TextEditingController();
+    final TextEditingController teamTwoPlayer1 = TextEditingController();
+    final TextEditingController teamTwoPlayer2 = TextEditingController();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -22,7 +22,7 @@ class CreateMatchContentView extends StatelessWidget {
         title: const Text('Create Teams'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -39,11 +39,11 @@ class CreateMatchContentView extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Team name'),
+                      const Text('Team name'),
                       SizedBox(
                         height: 50,
                         child: TextFormField(
-                          controller: _teamOneName,
+                          controller: teamOneName,
                           decoration:
                               InputDecoration(border: OutlineInputBorder()),
                         ),
@@ -52,7 +52,7 @@ class CreateMatchContentView extends StatelessWidget {
                       SizedBox(
                         height: 50,
                         child: TextFormField(
-                          controller: _teamOnePlayer1,
+                          controller: teamOnePlayer1,
                           decoration:
                               InputDecoration(border: OutlineInputBorder()),
                         ),
@@ -61,7 +61,7 @@ class CreateMatchContentView extends StatelessWidget {
                       SizedBox(
                         height: 50,
                         child: TextFormField(
-                          controller: _teamOnePlayer2,
+                          controller: teamOnePlayer2,
                           decoration:
                               InputDecoration(border: OutlineInputBorder()),
                         ),
@@ -85,7 +85,7 @@ class CreateMatchContentView extends StatelessWidget {
                       SizedBox(
                         height: 50,
                         child: TextFormField(
-                          controller: _teamTwoName,
+                          controller: teamTwoName,
                           decoration:
                               InputDecoration(border: OutlineInputBorder()),
                         ),
@@ -94,7 +94,7 @@ class CreateMatchContentView extends StatelessWidget {
                       SizedBox(
                         height: 50,
                         child: TextFormField(
-                          controller: _teamTwoPlayer1,
+                          controller: teamTwoPlayer1,
                           decoration:
                               InputDecoration(border: OutlineInputBorder()),
                         ),
@@ -103,9 +103,9 @@ class CreateMatchContentView extends StatelessWidget {
                       SizedBox(
                         height: 50,
                         child: TextFormField(
-                          controller: _teamTwoPlayer2,
-                          decoration:
-                              InputDecoration(border: OutlineInputBorder()),
+                          controller: teamTwoPlayer2,
+                          decoration: const InputDecoration(
+                              border: OutlineInputBorder()),
                         ),
                       ),
                     ],
@@ -119,13 +119,13 @@ class CreateMatchContentView extends StatelessWidget {
                   onPressed: () {
                     context.read<CreateMatchCubit>().createMatch(
                         TeamEntity(
-                            teamName: _teamOneName.text,
-                            playerOneName: _teamOnePlayer1.text,
-                            playerTwoName: _teamTwoPlayer2.text),
+                            teamName: teamOneName.text,
+                            playerOneName: teamOnePlayer1.text,
+                            playerTwoName: teamTwoPlayer2.text),
                         TeamEntity(
-                            teamName: _teamOnePlayer2.text,
-                            playerOneName: _teamTwoPlayer1.text,
-                            playerTwoName: _teamTwoPlayer2.text));
+                            teamName: teamTwoName.text,
+                            playerOneName: teamTwoPlayer1.text,
+                            playerTwoName: teamTwoPlayer2.text));
                     Navigator.pop(context);
                   },
                   child: const Text(

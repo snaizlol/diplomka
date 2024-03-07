@@ -3,6 +3,7 @@ import 'package:diplomka/pages/create_match/create_match_page.dart';
 import 'package:diplomka/pages/detail/detail_page.dart';
 import 'package:diplomka/pages/home/home_page.dart';
 import 'package:diplomka/pages/initial/initial_page.dart';
+import 'package:diplomka/pages/match_detail_page/match_detail_page.dart';
 import 'package:diplomka/pages/search/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -16,7 +17,7 @@ class AppNavigation {
   static final _rootNavigatorHome =
       GlobalKey<NavigatorState>(debugLabel: 'home');
   static final _rootNavigatorSearch =
-      GlobalKey<NavigatorState>(debugLabel: 'search');
+      GlobalKey<NavigatorState>(debugLabel: 'scoreboard');
   static final _rootNavigatorArticles =
       GlobalKey<NavigatorState>(debugLabel: 'articles');
 
@@ -59,8 +60,8 @@ class AppNavigation {
               navigatorKey: _rootNavigatorSearch,
               routes: [
                 GoRoute(
-                  path: '/search',
-                  name: 'Search',
+                  path: '/scoreboard',
+                  name: 'Scoreboard',
                   builder: (context, state) {
                     return SearchPage(
                       key: state.pageKey,
@@ -76,6 +77,14 @@ class AppNavigation {
                         );
                       },
                     ),
+                    GoRoute(
+                      path: MatchDetailPage.routePath,
+                      name: MatchDetailPage.routeName,
+                      builder: (context, state) => MatchDetailPage(
+                        key: state.pageKey,
+                        id: int.tryParse('${state.pathParameters['id']}'),
+                      ),
+                    )
                   ],
                 ),
               ],
