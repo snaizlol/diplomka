@@ -2,6 +2,7 @@ import 'package:diplomka/components/article_card.dart';
 import 'package:diplomka/cubit/articles_cubit/articles_page_cubit.dart';
 import 'package:diplomka/cubit/articles_cubit/articles_page_state.dart';
 import 'package:diplomka/pages/articles/articles_detail_page.dart';
+import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -13,7 +14,10 @@ class ArticlesContentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Articles'),
+        title: const Text(
+          'Articles',
+          style: CustomTextStyles.header,
+        ),
         backgroundColor: const Color.fromARGB(100, 243, 218, 189),
       ),
       body: Center(

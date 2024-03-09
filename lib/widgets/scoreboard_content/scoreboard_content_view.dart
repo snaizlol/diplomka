@@ -2,20 +2,23 @@ import 'package:diplomka/cubit/matches_cubit/matches_cubit.dart';
 import 'package:diplomka/cubit/matches_cubit/matches_state.dart';
 import 'package:diplomka/pages/create_match/create_match_page.dart';
 import 'package:diplomka/pages/match_detail_page/match_detail_page.dart';
+import 'package:diplomka/theme/theme_colors.dart';
+import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class SearchContentView extends StatelessWidget {
-  const SearchContentView({super.key});
+class ScoreboardContentView extends StatelessWidget {
+  const ScoreboardContentView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(100, 243, 218, 189),
+        backgroundColor: ProjectColors.headerColor,
         title: const Text(
-          'Matches',
+          'Scoreboard',
+          style: CustomTextStyles.header,
         ),
       ),
       body: Builder(builder: (context) {
@@ -41,8 +44,9 @@ class SearchContentView extends StatelessWidget {
                                 pathParameters: {
                                   'id': (state.list[index].matchId)
                                 },
-                              ).then((value) =>
-                                  context.read<MatchCubit>()..load());
+                              ).then(
+                                (value) => context.read<MatchCubit>()..load(),
+                              );
                             },
                           ),
                         );
@@ -104,7 +108,13 @@ class CardScoreboardWidget extends StatelessWidget {
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                            '${state.list[index].teamOne.playerOneName} & ${state.list[index].teamOne.playerTwoName}'),
+                          state.list[index].teamOne.playerOneName,
+                          maxLines: 1,
+                        ),
+                        Text(
+                          state.list[index].teamOne.playerTwoName,
+                          maxLines: 1,
+                        )
                       ],
                     ),
                   ),
@@ -132,7 +142,13 @@ class CardScoreboardWidget extends StatelessWidget {
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                            '${state.list[index].teamTwo.playerOneName} & ${state.list[index].teamTwo.playerTwoName}'),
+                          state.list[index].teamTwo.playerOneName,
+                          maxLines: 1,
+                        ),
+                        Text(
+                          state.list[index].teamTwo.playerTwoName,
+                          maxLines: 1,
+                        )
                       ],
                     ),
                   ),

@@ -1,5 +1,6 @@
-import 'package:diplomka/cubit/detail_page_cubit/detail_page_cubit.dart';
-import 'package:diplomka/cubit/detail_page_cubit/detail_page_state.dart';
+import 'package:diplomka/cubit/pub_detail_page_cubit/detail_page_cubit.dart';
+import 'package:diplomka/cubit/pub_detail_page_cubit/detail_page_state.dart';
+import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,7 +20,10 @@ class DetailPageContentView extends StatelessWidget {
             } else if (state is DetailPageStateLoaded) {
               return Scaffold(
                 appBar: AppBar(
-                  title: Text(state.pub.name),
+                  title: Text(
+                    state.pub.name,
+                    style: CustomTextStyles.header,
+                  ),
                   backgroundColor: const Color.fromARGB(100, 243, 218, 189),
                 ),
                 body: Center(
@@ -39,32 +43,40 @@ class DetailPageContentView extends StatelessWidget {
                         ),
                         const SizedBox(height: 20),
                         Text(
-                          state.pub.name,
-                          style: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          'Adress : ${state.pub.adress}',
+                          style: CustomTextStyles.regularText,
                         ),
-                        Text('Adress : ${state.pub.adress}'),
-                        Text('Rating : ${state.pub.rating}'),
+                        Text(
+                          'Rating : ${state.pub.rating}',
+                          style: CustomTextStyles.regularText,
+                        ),
                         for (var i = 0; i < state.pub.beers.length; i++)
                           Text(
                             '${state.pub.beers[i].name} : ${state.pub.beers[i].price} czk',
+                            style: CustomTextStyles.regularText,
                           ),
+                        Text(
+                          'Type of table: ${state.pub.fotbalek.brand}',
+                          style: CustomTextStyles.regularText,
+                        ),
                         const SizedBox(
                           height: 40,
                         ),
-                        const Text('Tables :'),
+                        const Text(
+                          'Tables :',
+                          style: CustomTextStyles.headline2,
+                        ),
                         const SizedBox(
                           height: 20,
                         ),
                         ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(12)),
                           child: SizedBox(
                             height: 120,
                             child: ListView.separated(
                               separatorBuilder: (context, index) {
-                                return SizedBox(
+                                return const SizedBox(
                                   width: 20,
                                 );
                               },
@@ -75,7 +87,8 @@ class DetailPageContentView extends StatelessWidget {
                                 return Container(
                                   height: 120,
                                   width: 150,
-                                  color: Color.fromARGB(255, 228, 228, 228),
+                                  color:
+                                      const Color.fromARGB(255, 228, 228, 228),
                                 );
                               },
                             ),

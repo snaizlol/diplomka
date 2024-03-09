@@ -1,7 +1,7 @@
 import 'package:diplomka/cubit/articles_cubit/articles_detail_page_cubit.dart';
 import 'package:diplomka/cubit/articles_cubit/articles_page_cubit.dart';
 import 'package:diplomka/cubit/create_match_cubit/create_match_cubit.dart';
-import 'package:diplomka/cubit/detail_page_cubit/detail_page_cubit.dart';
+import 'package:diplomka/cubit/pub_detail_page_cubit/detail_page_cubit.dart';
 import 'package:diplomka/cubit/home_page_cubit/home_page_cubit.dart';
 import 'package:diplomka/cubit/match_detail_cubit/match_detail_cubit.dart';
 import 'package:diplomka/cubit/matches_cubit/matches_cubit.dart';

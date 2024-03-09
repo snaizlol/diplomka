@@ -1,5 +1,6 @@
 import 'package:diplomka/cubit/articles_cubit/aritcles_detail_page_state.dart';
 import 'package:diplomka/cubit/articles_cubit/articles_detail_page_cubit.dart';
+import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,6 +13,7 @@ class ArticleDetailsContentView extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Back to Articles',
+          style: CustomTextStyles.header,
         ),
       ),
       body: BlocBuilder<ArticleDetailPageCubit, ArticleDetailPageState>(
@@ -47,7 +49,10 @@ class ArticleDetailsContentView extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    Text(state.article.text)
+                    Text(
+                      state.article.text,
+                      style: CustomTextStyles.regularText,
+                    )
                   ],
                 ),
               ),

@@ -1,3 +1,4 @@
+import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
@@ -48,15 +49,24 @@ class CardWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(name),
-                  Text(adress),
+                  Text(
+                    name,
+                    style: CustomTextStyles.regularText,
+                  ),
+                  Text(
+                    adress,
+                    style: CustomTextStyles.regularText,
+                  ),
                   Row(
                     children: [
                       const Icon(
                         Icons.star,
                         color: Colors.amber,
                       ),
-                      Text('$rating')
+                      Text(
+                        '$rating',
+                        style: CustomTextStyles.regularText,
+                      )
                     ],
                   ),
                 ],

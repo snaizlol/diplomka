@@ -30,7 +30,7 @@ class _InitialPageState extends State<InitialPage> {
             icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
-            label: 'Search',
+            label: 'Scoreboard',
             icon: Icon(Icons.search),
           ),
           BottomNavigationBarItem(
