@@ -1,9 +1,10 @@
-import 'package:diplomka/pages/articles_page.dart';
-import 'package:diplomka/pages/detail_page.dart';
-import 'package:diplomka/pages/home_page.dart';
-import 'package:diplomka/pages/initial_page.dart';
-import 'package:diplomka/pages/search_page.dart';
-import 'package:diplomka/widgets/home_page_content_view.dart';
+import 'package:diplomka/pages/articles/articles_page.dart';
+import 'package:diplomka/pages/create_match/create_match_page.dart';
+import 'package:diplomka/pages/detail/detail_page.dart';
+import 'package:diplomka/pages/home/home_page.dart';
+import 'package:diplomka/pages/initial/initial_page.dart';
+import 'package:diplomka/pages/match_detail_page/match_detail_page.dart';
+import 'package:diplomka/pages/search/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -16,7 +17,7 @@ class AppNavigation {
   static final _rootNavigatorHome =
       GlobalKey<NavigatorState>(debugLabel: 'home');
   static final _rootNavigatorSearch =
-      GlobalKey<NavigatorState>(debugLabel: 'search');
+      GlobalKey<NavigatorState>(debugLabel: 'scoreboard');
   static final _rootNavigatorArticles =
       GlobalKey<NavigatorState>(debugLabel: 'articles');
 
@@ -42,6 +43,16 @@ class AppNavigation {
                       key: state.pageKey,
                     );
                   },
+                  routes: [
+                    GoRoute(
+                      name: DetailPage.routeName,
+                      path: DetailPage.routePath,
+                      builder: (context, state) => DetailPage(
+                        key: state.pageKey,
+                        id: int.tryParse('${state.pathParameters['id']}'),
+                      ),
+                    )
+                  ],
                 ),
               ],
             ),
@@ -49,23 +60,33 @@ class AppNavigation {
               navigatorKey: _rootNavigatorSearch,
               routes: [
                 GoRoute(
-                    path: '/search',
-                    name: 'Search',
-                    builder: (context, state) {
-                      return SearchPage(
-                        key: state.pageKey,
-                      );
-                    },
-                    routes: [
-                      GoRoute(
-                        name: DetailPage.routeName,
-                        path: DetailPage.routePath,
-                        builder: (context, state) => DetailPage(
+                  path: '/scoreboard',
+                  name: 'Scoreboard',
+                  builder: (context, state) {
+                    return SearchPage(
+                      key: state.pageKey,
+                    );
+                  },
+                  routes: [
+                    GoRoute(
+                      path: CreateMatchPage.routePath,
+                      name: CreateMatchPage.routeName,
+                      builder: (context, state) {
+                        return CreateMatchPage(
                           key: state.pageKey,
-                          id: int.tryParse('${state.pathParameters['id']}'),
-                        ),
-                      )
-                    ]),
+                        );
+                      },
+                    ),
+                    GoRoute(
+                      path: MatchDetailPage.routePath,
+                      name: MatchDetailPage.routeName,
+                      builder: (context, state) => MatchDetailPage(
+                        key: state.pageKey,
+                        id: state.pathParameters['id'] ?? '0',
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
             StatefulShellBranch(
@@ -81,7 +102,7 @@ class AppNavigation {
                   },
                 ),
               ],
-            )
+            ),
           ],
         ),
       ]);
