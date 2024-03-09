@@ -49,7 +49,38 @@ class DetailPageContentView extends StatelessWidget {
                         Text('Rating : ${state.pub.rating}'),
                         for (var i = 0; i < state.pub.beers.length; i++)
                           Text(
-                              '${state.pub.beers[i].name} : ${state.pub.beers[i].price} czk'),
+                            '${state.pub.beers[i].name} : ${state.pub.beers[i].price} czk',
+                          ),
+                        const SizedBox(
+                          height: 40,
+                        ),
+                        const Text('Tables :'),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                          child: SizedBox(
+                            height: 120,
+                            child: ListView.separated(
+                              separatorBuilder: (context, index) {
+                                return SizedBox(
+                                  width: 20,
+                                );
+                              },
+                              itemCount: state.pub.tableImages.length,
+                              shrinkWrap: true,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  height: 120,
+                                  width: 150,
+                                  color: Color.fromARGB(255, 228, 228, 228),
+                                );
+                              },
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),

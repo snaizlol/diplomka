@@ -17,7 +17,7 @@ class DetailPageCubit extends Cubit<DetailPageState> {
 
     Future.delayed(
       const Duration(
-        seconds: 2,
+        seconds: 1,
       ),
       () {
         emit(

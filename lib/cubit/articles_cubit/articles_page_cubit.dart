@@ -13,16 +13,10 @@ class ArticlesPageCubit extends Cubit<ArticlesPageState> {
       ArticlesPageLoading(),
     );
 
-    List<ArticleEntity> articles = repo.getAll();
-    Future.delayed(
-      const Duration(
-        seconds: 2,
-      ),
-      () {
-        emit(
-          ArticlesPageLoaded(articles),
-        );
-      },
+    List<ArticleEntity> articles = repo.getArticleAll();
+
+    emit(
+      ArticlesPageLoaded(articles),
     );
   }
 }

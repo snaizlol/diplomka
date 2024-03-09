@@ -5,14 +5,14 @@ class ArticlesRepositoryImplementation implements ArticlesRepository {
   ArticlesRepositoryImplementation(this.repo);
   final ArticlesMockupRepository repo;
   @override
-  getAll() {
+  getArticleAll() {
     final data = repo.list;
     return data;
   }
 
   @override
-  getById(int id) {
-    // TODO: implement getById
-    throw UnimplementedError();
+  getArticleById(int id) {
+    final article = repo.list.where((element) => element.id == id).first;
+    return article;
   }
 }

@@ -42,7 +42,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                   backgroundColor: const Color.fromARGB(100, 243, 218, 189),
                   title: const Text(
                     'Home Page',
-                    style: TextStyle(fontFamily: 'Roboto'),
+                    style: TextStyle(fontFamily: 'Montserrat'),
                   ),
                 ),
                 body: Column(
@@ -60,7 +60,9 @@ class _HomePageContentViewState extends State<HomePageContentView>
                         Tab(
                           text: 'Rosengaart',
                         ),
-                        Tab(text: 'Leonhaart'),
+                        Tab(
+                          text: 'Leonhaart',
+                        ),
                         Tab(
                           text: 'Others',
                         )

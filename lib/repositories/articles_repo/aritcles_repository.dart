@@ -1,4 +1,4 @@
 abstract interface class ArticlesRepository {
-  getById(int id);
-  getAll();
+  getArticleById(int id);
+  getArticleAll();
 }

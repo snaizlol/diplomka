@@ -28,14 +28,17 @@ class CardWidget extends StatelessWidget {
           ),
           child: Row(
             children: [
-              SizedBox(
-                height: 100,
-                width: 100,
-                child: Image.network(
-                  'https://picsum.photos/200',
-                  errorBuilder: (context, error, stackTrace) {
-                    return const Placeholder();
-                  },
+              ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+                child: SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: Image.network(
+                    'https://picsum.photos/200',
+                    errorBuilder: (context, error, stackTrace) {
+                      return const Placeholder();
+                    },
+                  ),
                 ),
               ),
               const SizedBox(

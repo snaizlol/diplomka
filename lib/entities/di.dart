@@ -1,3 +1,4 @@
+import 'package:diplomka/cubit/articles_cubit/articles_detail_page_cubit.dart';
 import 'package:diplomka/cubit/articles_cubit/articles_page_cubit.dart';
 import 'package:diplomka/cubit/create_match_cubit/create_match_cubit.dart';
 import 'package:diplomka/cubit/detail_page_cubit/detail_page_cubit.dart';
@@ -60,6 +61,8 @@ void register() {
       getIt.get<FotbalkeeRepository>(),
     ),
   );
+  getIt.registerFactory<ArticleDetailPageCubit>(
+      () => ArticleDetailPageCubit(getIt.get<ArticlesRepository>()));
   getIt.registerFactory<ArticlesPageCubit>(
       () => ArticlesPageCubit(getIt.get<ArticlesRepository>()));
 }

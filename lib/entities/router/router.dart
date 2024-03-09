@@ -1,3 +1,4 @@
+import 'package:diplomka/pages/articles/articles_detail_page.dart';
 import 'package:diplomka/pages/articles/articles_page.dart';
 import 'package:diplomka/pages/create_match/create_match_page.dart';
 import 'package:diplomka/pages/detail/detail_page.dart';
@@ -100,6 +101,18 @@ class AppNavigation {
                       key: state.pageKey,
                     );
                   },
+                  routes: [
+                    GoRoute(
+                      name: ArticlesDetailPage.routeName,
+                      path: ArticlesDetailPage.routePath,
+                      builder: (context, state) => ArticlesDetailPage(
+                        key: state.pageKey,
+                        id: int.tryParse(
+                          '${state.pathParameters['id']}',
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
