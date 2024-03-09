@@ -12,7 +12,7 @@ class MatchDetailContentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Match info',
         ),
       ),
@@ -31,11 +31,11 @@ class MatchDetailContentView extends StatelessWidget {
                 children: [
                   Text(
                     state.matchInfo.teamOne.teamName,
-                    style: TextStyle(fontSize: 30),
+                    style: const TextStyle(fontSize: 30),
                   ),
                   Text(
                     state.matchInfo.teamTwo.teamName,
-                    style: TextStyle(fontSize: 30),
+                    style: const TextStyle(fontSize: 30),
                   ),
                 ],
               ),
@@ -44,7 +44,7 @@ class MatchDetailContentView extends StatelessWidget {
                 children: [
                   Text(
                     '${state.teamOneWins} : ${state.teamTwoWins}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 24,
                     ),
                   ),
@@ -64,7 +64,7 @@ class MatchDetailContentView extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 100,
                   ),
                   Column(
@@ -89,15 +89,15 @@ class MatchDetailContentView extends StatelessWidget {
                           onPressed: () {
                             context.read<MatchDetailCubit>().addWin(id, 1);
                           },
-                          child: Icon(Icons.add)),
-                      SizedBox(
+                          child: const Icon(Icons.add)),
+                      const SizedBox(
                         width: 10,
                       ),
                       ElevatedButton(
                           onPressed: () {
                             context.read<MatchDetailCubit>().removeWin(id, 1);
                           },
-                          child: Icon(Icons.remove)),
+                          child: const Icon(Icons.remove)),
                     ],
                   ),
                   Row(
@@ -106,15 +106,15 @@ class MatchDetailContentView extends StatelessWidget {
                           onPressed: () {
                             context.read<MatchDetailCubit>().addWin(id, 2);
                           },
-                          child: Icon(Icons.add)),
-                      SizedBox(
+                          child: const Icon(Icons.add)),
+                      const SizedBox(
                         width: 10,
                       ),
                       ElevatedButton(
                           onPressed: () {
                             context.read<MatchDetailCubit>().removeWin(id, 2);
                           },
-                          child: Icon(Icons.remove)),
+                          child: const Icon(Icons.remove)),
                     ],
                   ),
                 ],
@@ -127,7 +127,7 @@ class MatchDetailContentView extends StatelessWidget {
                     context.read<MatchDetailCubit>().deleteMatch(id);
                     context.pop();
                   },
-                  child: Text('Delete match'))
+                  child: const Text('Delete match'))
             ],
           );
         } else

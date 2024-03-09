@@ -2,7 +2,6 @@ import 'package:diplomka/cubit/create_match_cubit/create_match_cubit.dart';
 import 'package:diplomka/entities/team_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class CreateMatchContentView extends StatelessWidget {
   const CreateMatchContentView({super.key});
@@ -44,26 +43,26 @@ class CreateMatchContentView extends StatelessWidget {
                         height: 50,
                         child: TextFormField(
                           controller: teamOneName,
-                          decoration:
-                              InputDecoration(border: OutlineInputBorder()),
+                          decoration: const InputDecoration(
+                              border: OutlineInputBorder()),
                         ),
                       ),
-                      Text('Player 1'),
+                      const Text('Player 1'),
                       SizedBox(
                         height: 50,
                         child: TextFormField(
                           controller: teamOnePlayer1,
-                          decoration:
-                              InputDecoration(border: OutlineInputBorder()),
+                          decoration: const InputDecoration(
+                              border: OutlineInputBorder()),
                         ),
                       ),
-                      Text('Player 2'),
+                      const Text('Player 2'),
                       SizedBox(
                         height: 50,
                         child: TextFormField(
                           controller: teamOnePlayer2,
-                          decoration:
-                              InputDecoration(border: OutlineInputBorder()),
+                          decoration: const InputDecoration(
+                              border: OutlineInputBorder()),
                         ),
                       ),
                     ],
@@ -86,8 +85,8 @@ class CreateMatchContentView extends StatelessWidget {
                         height: 50,
                         child: TextFormField(
                           controller: teamTwoName,
-                          decoration:
-                              InputDecoration(border: OutlineInputBorder()),
+                          decoration: const InputDecoration(
+                              border: OutlineInputBorder()),
                         ),
                       ),
                       const Text('Player 1'),
@@ -95,8 +94,8 @@ class CreateMatchContentView extends StatelessWidget {
                         height: 50,
                         child: TextFormField(
                           controller: teamTwoPlayer1,
-                          decoration:
-                              InputDecoration(border: OutlineInputBorder()),
+                          decoration: const InputDecoration(
+                              border: OutlineInputBorder()),
                         ),
                       ),
                       const Text('Player 2'),
