@@ -16,7 +16,7 @@ class _InitialPageState extends State<InitialPage> {
         initialLocation: index == widget.navigationShell.currentIndex);
   }
 
-  int _currentIndex = 0;
+  int _currentIndex = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,12 +26,12 @@ class _InitialPageState extends State<InitialPage> {
         selectedItemColor: Colors.black,
         items: const [
           BottomNavigationBarItem(
-            label: 'Home',
-            icon: Icon(Icons.home),
+            label: 'Scoreboard',
+            icon: Icon(Icons.scoreboard),
           ),
           BottomNavigationBarItem(
-            label: 'Scoreboard',
-            icon: Icon(Icons.search),
+            label: 'Home',
+            icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
             label: 'Articles',

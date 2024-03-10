@@ -17,7 +17,7 @@ class CustomTextStyles {
     fontWeight: FontWeight.bold,
   );
   static const TextStyle tab = TextStyle(
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.bold,
   );
   static const TextStyle regularText = TextStyle(

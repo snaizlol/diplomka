@@ -10,13 +10,8 @@ class PubMockupRepository {
       adress: 'Generala Piky',
       rating: 4,
       cooks: true,
-      pubImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAE',
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.smsticket.cz%2Fmista%2F1451-klubovna-praha&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAI',
-      ],
-      tableImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAQ'
-      ],
+      pubImages: [],
+      tableImages: ['assets/images/plzenka.jpeg', 'assets/images/dasen.jpeg'],
       beers: [
         BeerEntity(price: 40, name: 'Kacov'),
         BeerEntity(price: 50, name: 'Plzen'),
@@ -29,12 +24,10 @@ class PubMockupRepository {
       adress: 'Americka',
       rating: 2,
       cooks: false,
-      pubImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAE',
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.smsticket.cz%2Fmista%2F1451-klubovna-praha&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAI',
-      ],
+      pubImages: [],
       tableImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAQ'
+        'assets/images/u_sadu_3.jpeg',
+        'assets/images/u_sadu_4.jpeg'
       ],
       beers: [BeerEntity(price: 40, name: 'Kozel')],
       fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
@@ -45,12 +38,12 @@ class PubMockupRepository {
       adress: 'Zizkovska',
       rating: 2,
       cooks: true,
-      pubImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAE',
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.smsticket.cz%2Fmista%2F1451-klubovna-praha&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAI',
-      ],
+      pubImages: [],
       tableImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAQ'
+        'assets/images/woodoo.jpeg',
+        'assets/images/woodoo_2.jpeg',
+        'assets/images/woodoo_3.jpeg',
+        'assets/images/woodoo_4.jpeg'
       ],
       beers: [BeerEntity(price: 40, name: 'Kozel')],
       fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
@@ -61,12 +54,12 @@ class PubMockupRepository {
       adress: 'Thakurova',
       rating: 2,
       cooks: false,
-      pubImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAE',
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.smsticket.cz%2Fmista%2F1451-klubovna-praha&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAI',
-      ],
+      pubImages: [],
       tableImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAQ'
+        'assets/images/oaza.jpeg',
+        'assets/images/oaza_2.jpeg',
+        'assets/images/oaza_3.jpeg',
+        'assets/images/oaza_4.jpeg'
       ],
       beers: [BeerEntity(price: 40, name: 'Kozel')],
       fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
@@ -76,49 +69,94 @@ class PubMockupRepository {
       name: 'Zazemi',
       adress: 'Michalska',
       rating: 2,
-      pubImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAE',
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.smsticket.cz%2Fmista%2F1451-klubovna-praha&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAI',
-      ],
-      tableImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAQ'
-      ],
+      pubImages: [],
+      tableImages: ['assets/images/zazemi.jpeg', 'assets/images/zazemi_2.jpeg'],
       cooks: false,
       beers: [BeerEntity(price: 40, name: 'Kozel')],
       fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
     PubEntity(
       id: 5,
-      name: 'U dvou skoku',
-      adress: 'Bartlomejska',
+      name: 'Plzenka',
+      adress: 'Hermanova',
       rating: 4,
       cooks: false,
-      pubImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAE',
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.smsticket.cz%2Fmista%2F1451-klubovna-praha&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAI',
-      ],
+      pubImages: [],
       tableImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAQ'
+        'assets/images/plzenka.jpeg',
+        'assets/images/plzenka_2.jpeg',
       ],
       beers: [BeerEntity(price: 40, name: 'Kozel')],
       fotbalek: FotbalekEntity(brand: 'Garlando', rating: 4, isFree: false),
     ),
     PubEntity(
-      id: 5,
-      name: 'Tovarna',
-      adress: 'Bartlomejska',
-      pubImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAE',
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.smsticket.cz%2Fmista%2F1451-klubovna-praha&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAI',
-      ],
+      id: 6,
+      name: 'Famu',
+      adress: 'Smetanovo nabrezi 2',
+      pubImages: [],
+      tableImages: ['assets/images/famu.jpeg', 'assets/images/famu2.jpeg'],
+      rating: 4,
+      cooks: false,
+      beers: [BeerEntity(price: 40, name: 'Hubertus')],
+      fotbalek:
+          FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
+    ),
+    PubEntity(
+      id: 7,
+      name: 'Nadrazka',
+      adress: 'Dejvicka',
+      pubImages: [],
       tableImages: [
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fklubovna.povalec.cz%2Fo-klubovne&psig=AOvVaw3Jc7pPCv1YIA8TCXwlXwBb&ust=1710071213820000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPiR1OuN54QDFQAAAAAdAAAAABAQ'
+        'assets/images/nadrazka.jpeg',
+        'assets/images/nadrazka_2.jpeg'
       ],
       rating: 4,
       cooks: false,
-      beers: [BeerEntity(price: 40, name: 'Kozel')],
+      beers: [
+        BeerEntity(price: 59, name: 'Plzen'),
+        BeerEntity(price: 40, name: 'Staropramen')
+      ],
       fotbalek:
           FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
+    ),
+    PubEntity(
+      id: 8,
+      name: 'Vecernice',
+      adress: 'Ovenecka',
+      pubImages: [],
+      tableImages: [
+        'assets/images/vecernice.jpeg',
+        'assets/images/vecernice_2.jpeg',
+        'assets/images/vecernice_3.jpeg',
+        'assets/images/vecernice_4.jpeg'
+      ],
+      rating: 4,
+      cooks: false,
+      beers: [
+        BeerEntity(price: 59, name: 'Plzen'),
+        BeerEntity(price: 40, name: 'Staropramen')
+      ],
+      fotbalek:
+          FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
+    ),
+    PubEntity(
+      id: 9,
+      name: 'U Sadu',
+      adress: 'Skroupovo namesti',
+      pubImages: [],
+      tableImages: [
+        'assets/images/u_sadu.jpeg',
+        'assets/images/u_sadu_2.jpeg',
+        'assets/images/u_sadu_3.jpeg',
+        'assets/images/u_sadu_6.jpeg'
+      ],
+      rating: 4,
+      cooks: false,
+      beers: [
+        BeerEntity(price: 59, name: 'Plzen'),
+        BeerEntity(price: 60, name: 'Chric')
+      ],
+      fotbalek: FotbalekEntity(brand: 'Speedo sport', rating: 4, isFree: false),
     ),
   ];
 }

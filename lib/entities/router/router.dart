@@ -17,7 +17,7 @@ class AppNavigation {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
   static final _rootNavigatorHome =
       GlobalKey<NavigatorState>(debugLabel: 'home');
-  static final _rootNavigatorSearch =
+  static final _rootNavigatorScoreboard =
       GlobalKey<NavigatorState>(debugLabel: 'scoreboard');
   static final _rootNavigatorArticles =
       GlobalKey<NavigatorState>(debugLabel: 'articles');
@@ -34,31 +34,7 @@ class AppNavigation {
           },
           branches: <StatefulShellBranch>[
             StatefulShellBranch(
-              navigatorKey: _rootNavigatorHome,
-              routes: [
-                GoRoute(
-                  path: '/home',
-                  name: 'Home',
-                  builder: (context, state) {
-                    return HomePage(
-                      key: state.pageKey,
-                    );
-                  },
-                  routes: [
-                    GoRoute(
-                      name: DetailPage.routeName,
-                      path: DetailPage.routePath,
-                      builder: (context, state) => DetailPage(
-                        key: state.pageKey,
-                        id: int.tryParse('${state.pathParameters['id']}'),
-                      ),
-                    )
-                  ],
-                ),
-              ],
-            ),
-            StatefulShellBranch(
-              navigatorKey: _rootNavigatorSearch,
+              navigatorKey: _rootNavigatorScoreboard,
               routes: [
                 GoRoute(
                   path: '/scoreboard',
@@ -84,6 +60,30 @@ class AppNavigation {
                       builder: (context, state) => MatchDetailPage(
                         key: state.pageKey,
                         id: state.pathParameters['id'] ?? '0',
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+            StatefulShellBranch(
+              navigatorKey: _rootNavigatorHome,
+              routes: [
+                GoRoute(
+                  path: '/home',
+                  name: 'Home',
+                  builder: (context, state) {
+                    return HomePage(
+                      key: state.pageKey,
+                    );
+                  },
+                  routes: [
+                    GoRoute(
+                      name: DetailPage.routeName,
+                      path: DetailPage.routePath,
+                      builder: (context, state) => DetailPage(
+                        key: state.pageKey,
+                        id: int.tryParse('${state.pathParameters['id']}'),
                       ),
                     )
                   ],

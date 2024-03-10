@@ -11,17 +11,23 @@ class MatchesMockupRepository {
         matchId: '0',
         teamOneGamesWon: 3,
         teamTwo: TeamEntity(
-            teamName: 'Team 2', playerOneName: 'Dement', playerTwoName: 'Blb'),
+          teamName: 'Team 2',
+          playerOneName: 'Kristian',
+          playerTwoName: 'Tomas',
+        ),
         teamTwoGamesWon: 2),
     MatchEntity(
         teamOne: TeamEntity(
-            teamName: 'Roboti', playerOneName: 'Cert', playerTwoName: 'aijwdw'),
+          teamName: 'Marvel',
+          playerOneName: 'Nemam rad',
+          playerTwoName: 'Marvel',
+        ),
         matchId: '1',
         teamOneGamesWon: 1,
         teamTwo: TeamEntity(
-            teamName: 'Zviratka',
-            playerOneName: 'Neco',
-            playerTwoName: 'Jeden'),
+            teamName: 'D.C.',
+            playerOneName: 'Batman je',
+            playerTwoName: 'Hero'),
         teamTwoGamesWon: 1),
   ];
 }

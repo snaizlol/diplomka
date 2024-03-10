@@ -1,8 +1,10 @@
 import 'package:diplomka/cubit/pub_detail_page_cubit/detail_page_cubit.dart';
 import 'package:diplomka/cubit/pub_detail_page_cubit/detail_page_state.dart';
+import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:insta_image_viewer/insta_image_viewer.dart';
 
 class DetailPageContentView extends StatelessWidget {
   const DetailPageContentView({super.key});
@@ -24,55 +26,52 @@ class DetailPageContentView extends StatelessWidget {
                     state.pub.name,
                     style: CustomTextStyles.header,
                   ),
-                  backgroundColor: const Color.fromARGB(100, 243, 218, 189),
+                  backgroundColor: ProjectColors.headerColor,
                 ),
                 body: Center(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 20),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: const Color.fromARGB(255, 228, 228, 228),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: const Color.fromARGB(255, 228, 228, 228),
+                            ),
+                            height: height,
+                            width: width,
                           ),
-                          height: height,
-                          width: width,
-                        ),
-                        const SizedBox(height: 20),
-                        Text(
-                          'Adress : ${state.pub.adress}',
-                          style: CustomTextStyles.regularText,
-                        ),
-                        Text(
-                          'Rating : ${state.pub.rating}',
-                          style: CustomTextStyles.regularText,
-                        ),
-                        for (var i = 0; i < state.pub.beers.length; i++)
+                          const SizedBox(height: 20),
                           Text(
-                            '${state.pub.beers[i].name} : ${state.pub.beers[i].price} czk',
+                            'Adress : ${state.pub.adress}',
                             style: CustomTextStyles.regularText,
                           ),
-                        Text(
-                          'Type of table: ${state.pub.fotbalek.brand}',
-                          style: CustomTextStyles.regularText,
-                        ),
-                        const SizedBox(
-                          height: 40,
-                        ),
-                        const Text(
-                          'Tables :',
-                          style: CustomTextStyles.headline2,
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        ClipRRect(
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(12)),
-                          child: SizedBox(
+                          Text(
+                            'Rating : ${state.pub.rating}',
+                            style: CustomTextStyles.regularText,
+                          ),
+                          for (var i = 0; i < state.pub.beers.length; i++)
+                            Text(
+                              '${state.pub.beers[i].name} : ${state.pub.beers[i].price} czk',
+                              style: CustomTextStyles.regularText,
+                            ),
+                          Text(
+                            'Type of table: ${state.pub.fotbalek.brand}',
+                            style: CustomTextStyles.regularText,
+                          ),
+                          const SizedBox(
+                            height: 40,
+                          ),
+                          const Text(
+                            'Tables :',
+                            style: CustomTextStyles.headline2,
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          SizedBox(
                             height: 120,
                             child: ListView.separated(
                               separatorBuilder: (context, index) {
@@ -84,17 +83,19 @@ class DetailPageContentView extends StatelessWidget {
                               shrinkWrap: true,
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
-                                return Container(
-                                  height: 120,
-                                  width: 150,
-                                  color:
-                                      const Color.fromARGB(255, 228, 228, 228),
+                                return InstaImageViewer(
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(12)),
+                                    child: Image.asset(
+                                        state.pub.tableImages[index]),
+                                  ),
                                 );
                               },
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),

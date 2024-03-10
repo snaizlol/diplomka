@@ -18,60 +18,63 @@ class CardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      child: GestureDetector(
-        onTap: callback,
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 244, 244, 244),
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Row(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(12)),
-                child: SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: Image.network(
-                    'https://picsum.photos/200',
-                    errorBuilder: (context, error, stackTrace) {
-                      return const Placeholder();
-                    },
+    return Padding(
+      padding: const EdgeInsets.only(top: 20),
+      child: SizedBox(
+        height: 100,
+        child: GestureDetector(
+          onTap: callback,
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 244, 244, 244),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(12)),
+                  child: SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: Image.network(
+                      'https://picsum.photos/200',
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Placeholder();
+                      },
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    name,
-                    style: CustomTextStyles.regularText,
-                  ),
-                  Text(
-                    adress,
-                    style: CustomTextStyles.regularText,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                      ),
-                      Text(
-                        '$rating',
-                        style: CustomTextStyles.regularText,
-                      )
-                    ],
-                  ),
-                ],
-              )
-            ],
+                const SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      name,
+                      style: CustomTextStyles.regularText,
+                    ),
+                    Text(
+                      adress,
+                      style: CustomTextStyles.regularText,
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        Text(
+                          '$rating',
+                          style: CustomTextStyles.regularText,
+                        )
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),

@@ -2,6 +2,7 @@ import 'package:diplomka/components/fotbalkee_card.dart';
 import 'package:diplomka/cubit/home_page_cubit/home_page_cubit.dart';
 import 'package:diplomka/cubit/home_page_cubit/home_page_state.dart';
 import 'package:diplomka/pages/detail/detail_page.dart';
+import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,13 +41,14 @@ class _HomePageContentViewState extends State<HomePageContentView>
             } else if (state is HomePageStateLoaded) {
               return Scaffold(
                 appBar: AppBar(
-                  backgroundColor: const Color.fromARGB(100, 243, 218, 189),
+                  backgroundColor: ProjectColors.headerColor,
                   title: const Text(
                     'Home Page',
                     style: CustomTextStyles.header,
                   ),
                 ),
                 body: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     TabBar(
                       controller: tabController,
@@ -83,17 +85,11 @@ class _HomePageContentViewState extends State<HomePageContentView>
                         controller: tabController,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 40, vertical: 40),
+                            padding: const EdgeInsets.symmetric(horizontal: 40),
                             child: BlocBuilder<HomePageCubit, HomePageState>(
                               builder: (context, state) {
-                                return ListView.separated(
+                                return ListView.builder(
                                   shrinkWrap: true,
-                                  separatorBuilder: (context, index) {
-                                    return const SizedBox(
-                                      height: 20,
-                                    );
-                                  },
                                   itemCount: state.list.length,
                                   itemBuilder: (context, index) {
                                     if (state.list[index].fotbalek.brand ==
@@ -122,17 +118,11 @@ class _HomePageContentViewState extends State<HomePageContentView>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 40, vertical: 40),
+                            padding: const EdgeInsets.symmetric(horizontal: 40),
                             child: BlocBuilder<HomePageCubit, HomePageState>(
                               builder: (context, state) {
-                                return ListView.separated(
+                                return ListView.builder(
                                   shrinkWrap: true,
-                                  separatorBuilder: (context, index) {
-                                    return const SizedBox(
-                                      height: 20,
-                                    );
-                                  },
                                   itemCount: state.list.length,
                                   itemBuilder: (context, index) {
                                     if (state.list[index].fotbalek.brand ==
@@ -161,17 +151,11 @@ class _HomePageContentViewState extends State<HomePageContentView>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 40, vertical: 40),
+                            padding: const EdgeInsets.symmetric(horizontal: 40),
                             child: BlocBuilder<HomePageCubit, HomePageState>(
                               builder: (context, state) {
-                                return ListView.separated(
+                                return ListView.builder(
                                   shrinkWrap: true,
-                                  separatorBuilder: (context, index) {
-                                    return const SizedBox(
-                                      height: 20,
-                                    );
-                                  },
                                   itemCount: state.list.length,
                                   itemBuilder: (context, index) {
                                     if (state.list[index].fotbalek.brand !=
