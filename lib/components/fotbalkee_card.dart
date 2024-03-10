@@ -9,12 +9,14 @@ class CardWidget extends StatelessWidget {
       required this.rating,
       required this.adress,
       required this.index,
-      required this.callback});
+      required this.callback,
+      required this.imageUrl});
 
   final String name;
   final double rating;
   final String adress;
   final int index;
+  final String imageUrl;
   final void Function() callback;
 
   @override
@@ -33,12 +35,14 @@ class CardWidget extends StatelessWidget {
             child: Row(
               children: [
                 ClipRRect(
-                  borderRadius: const BorderRadius.all(Radius.circular(12)),
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(12),
+                      bottomLeft: Radius.circular(12)),
                   child: SizedBox(
-                    height: 100,
-                    width: 100,
-                    child: Image.network(
-                      'https://picsum.photos/200',
+                    height: 130,
+                    width: 130,
+                    child: Image.asset(
+                      imageUrl,
                       errorBuilder: (context, error, stackTrace) {
                         return const Placeholder();
                       },
@@ -54,11 +58,16 @@ class CardWidget extends StatelessWidget {
                   children: [
                     Text(
                       name,
-                      style: CustomTextStyles.regularText,
+                      style: CustomTextStyles.regularTextBold,
                     ),
-                    Text(
-                      adress,
-                      style: CustomTextStyles.regularText,
+                    Row(
+                      children: [
+                        Text(
+                          adress,
+                          style: CustomTextStyles.pubDetailStyle,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
                     ),
                     Row(
                       children: [

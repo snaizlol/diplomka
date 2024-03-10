@@ -31,14 +31,14 @@ class MatchDetailContentView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Expanded(
                     child: Center(
                       child: Text(
                         state.matchInfo.teamOne.teamName,
                         maxLines: 2,
-                        style: const TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 24),
                       ),
                     ),
                   ),
@@ -46,7 +46,7 @@ class MatchDetailContentView extends StatelessWidget {
                     child: Center(
                       child: Text(
                         state.matchInfo.teamTwo.teamName,
-                        style: const TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 24),
                         maxLines: 2,
                       ),
                     ),
@@ -59,18 +59,19 @@ class MatchDetailContentView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    '${state.teamOneWins} : ${state.teamTwoWins}',
-                    style: const TextStyle(
-                      fontSize: 24,
-                    ),
-                  ),
+                  Text('${state.teamOneWins} : ${state.teamTwoWins}',
+                      style: CustomTextStyles.headlineRegular),
                 ],
               ),
               state.teamOneWins == 0 && state.teamTwoWins == 0
-                  ? const Text('Win rate none')
+                  ? const Text(
+                      'Win rate none',
+                      style: CustomTextStyles.regularText,
+                    )
                   : Text(
-                      '${((state.teamOneWins / (state.teamOneWins + state.teamTwoWins)) * 100).toStringAsFixed(1)}% : ${((state.teamTwoWins / (state.teamOneWins + state.teamTwoWins)) * 100).toStringAsFixed(1)}% '),
+                      '${((state.teamOneWins / (state.teamOneWins + state.teamTwoWins)) * 100).toStringAsFixed(1)}% : ${((state.teamTwoWins / (state.teamOneWins + state.teamTwoWins)) * 100).toStringAsFixed(1)}% ',
+                      style: CustomTextStyles.regularText,
+                    ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -78,9 +79,13 @@ class MatchDetailContentView extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(state.matchInfo.teamOne.playerOneName),
+                        Text(
+                          state.matchInfo.teamOne.playerOneName,
+                          style: CustomTextStyles.regularText,
+                        ),
                         Text(
                           state.matchInfo.teamOne.playerTwoName,
+                          style: CustomTextStyles.regularText,
                         )
                       ],
                     ),
@@ -94,9 +99,11 @@ class MatchDetailContentView extends StatelessWidget {
                       children: [
                         Text(
                           state.matchInfo.teamTwo.playerOneName,
+                          style: CustomTextStyles.regularText,
                         ),
                         Text(
                           state.matchInfo.teamTwo.playerTwoName,
+                          style: CustomTextStyles.regularText,
                         )
                       ],
                     ),

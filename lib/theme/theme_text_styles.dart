@@ -8,16 +8,15 @@ class CustomTextStyles {
     fontWeight: FontWeight.bold,
   );
 
-  static const TextStyle headline = TextStyle(
+  static const TextStyle headlineBold = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
   );
+  static const TextStyle headlineRegular = TextStyle(
+    fontSize: 24,
+  );
   static const TextStyle headline2 = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.bold,
-  );
-  static const TextStyle tab = TextStyle(
-    fontSize: 14,
     fontWeight: FontWeight.bold,
   );
   static const TextStyle regularText = TextStyle(
@@ -27,4 +26,9 @@ class CustomTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.bold,
   );
+  static const TextStyle tab = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle pubDetailStyle = TextStyle(fontSize: 14);
 }

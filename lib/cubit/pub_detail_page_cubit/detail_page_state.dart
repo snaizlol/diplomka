@@ -16,7 +16,7 @@ class DetailPageStateLoading extends DetailPageState {
             name: '',
             adress: '',
             rating: 0,
-            pubImages: [],
+            pubImage: '',
             tableImages: [],
             cooks: false,
             beers: [],

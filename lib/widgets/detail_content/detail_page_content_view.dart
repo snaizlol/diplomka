@@ -11,8 +11,6 @@ class DetailPageContentView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width - 40;
-    final height = MediaQuery.of(context).size.height / 4;
     return BlocBuilder<DetailPageCubit, DetailPageState>(
       builder: (context, state) {
         return Builder(
@@ -35,14 +33,12 @@ class DetailPageContentView extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: const Color.fromARGB(255, 228, 228, 228),
-                            ),
-                            height: height,
-                            width: width,
+                          const SizedBox(
+                            height: 20,
                           ),
+                          ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(state.pub.pubImage)),
                           const SizedBox(height: 20),
                           Row(
                             children: [
@@ -63,9 +59,14 @@ class DetailPageContentView extends StatelessWidget {
                                 style: CustomTextStyles.regularTextBold,
                               ),
                               Text(
-                                '${state.pub.rating}',
+                                '${state.pub.rating} ',
                                 style: CustomTextStyles.regularText,
-                              )
+                              ),
+                              const Icon(
+                                Icons.star,
+                                color: Colors.amber,
+                                size: 18,
+                              ),
                             ],
                           ),
                           for (var i = 0; i < state.pub.beers.length; i++)
@@ -94,7 +95,7 @@ class DetailPageContentView extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(
-                            height: 40,
+                            height: 20,
                           ),
                           const Text(
                             'Tables :',

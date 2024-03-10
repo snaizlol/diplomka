@@ -33,7 +33,7 @@ class ArticleDetailsContentView extends StatelessWidget {
                   children: [
                     Text(
                       state.article.title,
-                      style: CustomTextStyles.headline,
+                      style: CustomTextStyles.headlineBold,
                     ),
                     const SizedBox(
                       height: 20,

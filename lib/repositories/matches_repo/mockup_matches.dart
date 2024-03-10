@@ -17,17 +17,42 @@ class MatchesMockupRepository {
         ),
         teamTwoGamesWon: 2),
     MatchEntity(
-        teamOne: TeamEntity(
-          teamName: 'Marvel',
-          playerOneName: 'Nemam rad',
-          playerTwoName: 'Marvel',
-        ),
-        matchId: '1',
-        teamOneGamesWon: 1,
-        teamTwo: TeamEntity(
-            teamName: 'D.C.',
-            playerOneName: 'Batman je',
-            playerTwoName: 'Hero'),
-        teamTwoGamesWon: 1),
+      teamOne: TeamEntity(
+        teamName: 'Marvel',
+        playerOneName: 'Nemam rad',
+        playerTwoName: 'Marvel',
+      ),
+      matchId: '1',
+      teamOneGamesWon: 1,
+      teamTwo: TeamEntity(
+          teamName: 'D.C.', playerOneName: 'Batman je', playerTwoName: 'Hero'),
+      teamTwoGamesWon: 1,
+    ),
+    MatchEntity(
+      teamOne: TeamEntity(
+        teamName: 'Jedi',
+        playerOneName: 'Obi-Wan',
+        playerTwoName: 'Yoda',
+      ),
+      matchId: '2',
+      teamOneGamesWon: 4,
+      teamTwo: TeamEntity(
+          teamName: 'Sith', playerOneName: 'Dooku', playerTwoName: 'Palpatine'),
+      teamTwoGamesWon: 3,
+    ),
+    MatchEntity(
+      teamOne: TeamEntity(
+        teamName: 'Beatles',
+        playerOneName: 'Lennon',
+        playerTwoName: 'McCartney',
+      ),
+      matchId: '3',
+      teamOneGamesWon: 1,
+      teamTwo: TeamEntity(
+          teamName: 'Stones',
+          playerOneName: 'Jagger',
+          playerTwoName: 'Richards'),
+      teamTwoGamesWon: 1,
+    ),
   ];
 }

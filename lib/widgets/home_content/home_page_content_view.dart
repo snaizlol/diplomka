@@ -98,6 +98,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                                         name: state.list[index].name,
                                         rating: state.list[index].rating,
                                         adress: state.list[index].adress,
+                                        imageUrl: state.list[index].pubImage,
                                         index: index,
                                         callback: () {
                                           context.pushNamed(
@@ -131,6 +132,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                                         name: state.list[index].name,
                                         rating: state.list[index].rating,
                                         adress: state.list[index].adress,
+                                        imageUrl: state.list[index].pubImage,
                                         index: index,
                                         callback: () {
                                           context.pushNamed(
@@ -166,6 +168,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                                         name: state.list[index].name,
                                         rating: state.list[index].rating,
                                         adress: state.list[index].adress,
+                                        imageUrl: state.list[index].pubImage,
                                         index: index,
                                         callback: () {
                                           context.pushNamed(

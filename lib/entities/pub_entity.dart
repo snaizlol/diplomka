@@ -9,7 +9,7 @@ class PubEntity {
   bool? cooks;
   List<BeerEntity> beers;
   FotbalekEntity fotbalek;
-  List<String> pubImages;
+  String pubImage;
   List<String> tableImages;
 
   PubEntity({
@@ -20,7 +20,7 @@ class PubEntity {
     required this.cooks,
     required this.beers,
     required this.fotbalek,
-    required this.pubImages,
+    required this.pubImage,
     required this.tableImages,
   });
 }

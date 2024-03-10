@@ -39,7 +39,7 @@ class ArticleCard extends StatelessWidget {
               Text(
                 title,
                 maxLines: 1,
-                style: CustomTextStyles.headline,
+                style: CustomTextStyles.headlineBold,
               ),
               Text(
                 description,
