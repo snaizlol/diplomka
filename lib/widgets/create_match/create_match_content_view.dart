@@ -1,9 +1,9 @@
+import 'package:diplomka/components/create_team_input_field.dart';
 import 'package:diplomka/cubit/create_match_cubit/create_match_cubit.dart';
 import 'package:diplomka/entities/team_entity.dart';
 import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CreateMatchContentView extends StatelessWidget {
@@ -40,7 +40,7 @@ class CreateMatchContentView extends StatelessWidget {
                   children: [
                     const Text(
                       'Team 1',
-                      style: TextStyle(fontSize: 26),
+                      style: CustomTextStyles.headline2,
                     ),
                     const SizedBox(
                       height: 10,
@@ -48,11 +48,20 @@ class CreateMatchContentView extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('Team name'),
+                        const Text(
+                          'Team name',
+                          style: CustomTextStyles.regularText,
+                        ),
                         InputFieldWidget(teamOneName: teamOneName),
-                        const Text('Player 1'),
+                        const Text(
+                          'Player 1',
+                          style: CustomTextStyles.regularText,
+                        ),
                         InputFieldWidget(teamOneName: teamOnePlayer1),
-                        const Text('Player 2'),
+                        const Text(
+                          'Player 2',
+                          style: CustomTextStyles.regularText,
+                        ),
                         InputFieldWidget(teamOneName: teamOnePlayer2),
                       ],
                     ),
@@ -61,7 +70,7 @@ class CreateMatchContentView extends StatelessWidget {
                     ),
                     const Text(
                       'Team 2',
-                      style: TextStyle(fontSize: 26),
+                      style: CustomTextStyles.headline2,
                     ),
                     const SizedBox(
                       height: 20,
@@ -69,11 +78,20 @@ class CreateMatchContentView extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('Team name'),
+                        const Text(
+                          'Team name',
+                          style: CustomTextStyles.regularText,
+                        ),
                         InputFieldWidget(teamOneName: teamTwoName),
-                        const Text('Player 1'),
+                        const Text(
+                          'Player 1',
+                          style: CustomTextStyles.regularText,
+                        ),
                         InputFieldWidget(teamOneName: teamTwoPlayer1),
-                        const Text('Player 2'),
+                        const Text(
+                          'Player 2',
+                          style: CustomTextStyles.regularText,
+                        ),
                         InputFieldWidget(teamOneName: teamTwoPlayer2),
                       ],
                     ),
@@ -115,33 +133,6 @@ class CreateMatchContentView extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class InputFieldWidget extends StatelessWidget {
-  const InputFieldWidget({
-    super.key,
-    required this.teamOneName,
-  });
-
-  final TextEditingController teamOneName;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      inputFormatters: [LengthLimitingTextInputFormatter(20)],
-      validator: (text) {
-        if (text == null || text.isEmpty) {
-          return 'Text is empty';
-        }
-        return null;
-      },
-      controller: teamOneName,
-      decoration: const InputDecoration(
-        contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-        border: OutlineInputBorder(),
       ),
     );
   }

@@ -15,9 +15,11 @@ class ArticlesContentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Articles',
-          style: CustomTextStyles.header,
+        title: const Center(
+          child: Text(
+            'Articles',
+            style: CustomTextStyles.header,
+          ),
         ),
         backgroundColor: ProjectColors.headerColor,
       ),

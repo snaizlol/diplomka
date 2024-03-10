@@ -17,9 +17,11 @@ class ScoreboardContentView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ProjectColors.headerColor,
-        title: const Text(
-          'Scoreboard',
-          style: CustomTextStyles.header,
+        title: const Center(
+          child: Text(
+            'Scoreboard',
+            style: CustomTextStyles.header,
+          ),
         ),
       ),
       body: Builder(
