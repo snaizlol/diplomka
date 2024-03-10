@@ -44,22 +44,54 @@ class DetailPageContentView extends StatelessWidget {
                             width: width,
                           ),
                           const SizedBox(height: 20),
-                          Text(
-                            'Adress : ${state.pub.adress}',
-                            style: CustomTextStyles.regularText,
+                          Row(
+                            children: [
+                              const Text(
+                                'Adress : ',
+                                style: CustomTextStyles.regularTextBold,
+                              ),
+                              Text(
+                                state.pub.adress,
+                                style: CustomTextStyles.regularText,
+                              )
+                            ],
                           ),
-                          Text(
-                            'Rating : ${state.pub.rating}',
-                            style: CustomTextStyles.regularText,
+                          Row(
+                            children: [
+                              const Text(
+                                'Rating : ',
+                                style: CustomTextStyles.regularTextBold,
+                              ),
+                              Text(
+                                '${state.pub.rating}',
+                                style: CustomTextStyles.regularText,
+                              )
+                            ],
                           ),
                           for (var i = 0; i < state.pub.beers.length; i++)
-                            Text(
-                              '${state.pub.beers[i].name} : ${state.pub.beers[i].price} czk',
-                              style: CustomTextStyles.regularText,
+                            Row(
+                              children: [
+                                Text(
+                                  '${state.pub.beers[i].name} : ',
+                                  style: CustomTextStyles.regularTextBold,
+                                ),
+                                Text(
+                                  '${state.pub.beers[i].price} czk',
+                                  style: CustomTextStyles.regularText,
+                                )
+                              ],
                             ),
-                          Text(
-                            'Type of table: ${state.pub.fotbalek.brand}',
-                            style: CustomTextStyles.regularText,
+                          Row(
+                            children: [
+                              const Text(
+                                'Type of table: ',
+                                style: CustomTextStyles.regularTextBold,
+                              ),
+                              Text(
+                                state.pub.fotbalek.brand,
+                                style: CustomTextStyles.regularText,
+                              )
+                            ],
                           ),
                           const SizedBox(
                             height: 40,

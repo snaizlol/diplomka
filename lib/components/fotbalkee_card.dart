@@ -1,3 +1,4 @@
+import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ class CardWidget extends StatelessWidget {
           onTap: callback,
           child: DecoratedBox(
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 244, 244, 244),
+              color: ProjectColors.scoreboardCardColor,
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(

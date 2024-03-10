@@ -1,3 +1,4 @@
+import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class ArticleCard extends StatelessWidget {
@@ -38,7 +39,7 @@ class ArticleCard extends StatelessWidget {
               Text(
                 title,
                 maxLines: 1,
-                style: const TextStyle(fontSize: 25),
+                style: CustomTextStyles.headline,
               ),
               Text(
                 description,

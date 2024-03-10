@@ -23,4 +23,8 @@ class CustomTextStyles {
   static const TextStyle regularText = TextStyle(
     fontSize: 16,
   );
+  static const TextStyle regularTextBold = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
 }

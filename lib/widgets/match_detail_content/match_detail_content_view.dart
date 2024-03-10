@@ -1,5 +1,6 @@
 import 'package:diplomka/cubit/match_detail_cubit/match_detail_cubit.dart';
 import 'package:diplomka/cubit/match_detail_cubit/match_detail_state.dart';
+import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +14,7 @@ class MatchDetailContentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(100, 243, 218, 189),
+        backgroundColor: ProjectColors.headerColor,
         title: const Text(
           'Match info',
           style: CustomTextStyles.header,
