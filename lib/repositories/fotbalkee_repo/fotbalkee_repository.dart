@@ -5,6 +5,5 @@ abstract interface class FotbalkeeRepository {
   getAll();
   addPub(PubEntity pub);
   deletePub(int id);
-  updatePub(int id);
   getByName(String table);
 }

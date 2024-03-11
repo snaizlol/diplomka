@@ -3,7 +3,7 @@ import 'package:diplomka/entities/team_entity.dart';
 import 'package:diplomka/repositories/matches_repo/matches_repository.dart';
 import 'package:diplomka/repositories/matches_repo/mockup_matches.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:uuid/v4.dart';
+import 'package:uuid/uuid.dart';
 
 class CreateMatchCubit extends Cubit<CreateMatchState> {
   CreateMatchCubit(this.repo, this.mockupRepo) : super(CreateMatchLoading());
@@ -16,7 +16,12 @@ class CreateMatchCubit extends Cubit<CreateMatchState> {
   }
 
   createMatch(TeamEntity teamOne, TeamEntity teamTwo) {
-    var randomId = const UuidV4().toString();
-    repo.createMatch(teamOne, teamTwo, randomId);
+    const uuid = Uuid();
+    final newId = uuid.v4();
+    repo.createMatch(
+      teamOne,
+      teamTwo,
+      newId,
+    );
   }
 }

@@ -2,6 +2,8 @@ import 'package:diplomka/components/fotbalkee_card.dart';
 import 'package:diplomka/cubit/home_page_cubit/home_page_cubit.dart';
 import 'package:diplomka/cubit/home_page_cubit/home_page_state.dart';
 import 'package:diplomka/pages/detail/detail_page.dart';
+import 'package:diplomka/theme/theme_colors.dart';
+import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -39,13 +41,16 @@ class _HomePageContentViewState extends State<HomePageContentView>
             } else if (state is HomePageStateLoaded) {
               return Scaffold(
                 appBar: AppBar(
-                  backgroundColor: const Color.fromARGB(100, 243, 218, 189),
-                  title: const Text(
-                    'Home Page',
-                    style: TextStyle(fontFamily: 'Roboto'),
+                  backgroundColor: ProjectColors.headerColor,
+                  title: const Center(
+                    child: Text(
+                      'Home',
+                      style: CustomTextStyles.header,
+                    ),
                   ),
                 ),
                 body: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     TabBar(
                       controller: tabController,
@@ -56,13 +61,24 @@ class _HomePageContentViewState extends State<HomePageContentView>
                           color: Colors.black,
                         ),
                       ),
-                      tabs: const [
+                      tabs: [
                         Tab(
-                          text: 'Rosengaart',
+                          child: Text(
+                            tabBarNames[0],
+                            style: CustomTextStyles.tab,
+                          ),
                         ),
-                        Tab(text: 'Leonhaart'),
                         Tab(
-                          text: 'Others',
+                          child: Text(
+                            tabBarNames[1],
+                            style: CustomTextStyles.tab,
+                          ),
+                        ),
+                        Tab(
+                          child: Text(
+                            tabBarNames[2],
+                            style: CustomTextStyles.tab,
+                          ),
                         )
                       ],
                     ),
@@ -71,17 +87,11 @@ class _HomePageContentViewState extends State<HomePageContentView>
                         controller: tabController,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 40, vertical: 40),
+                            padding: const EdgeInsets.symmetric(horizontal: 40),
                             child: BlocBuilder<HomePageCubit, HomePageState>(
                               builder: (context, state) {
-                                return ListView.separated(
+                                return ListView.builder(
                                   shrinkWrap: true,
-                                  separatorBuilder: (context, index) {
-                                    return const SizedBox(
-                                      height: 20,
-                                    );
-                                  },
                                   itemCount: state.list.length,
                                   itemBuilder: (context, index) {
                                     if (state.list[index].fotbalek.brand ==
@@ -90,6 +100,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                                         name: state.list[index].name,
                                         rating: state.list[index].rating,
                                         adress: state.list[index].adress,
+                                        imageUrl: state.list[index].pubImage,
                                         index: index,
                                         callback: () {
                                           context.pushNamed(
@@ -110,17 +121,11 @@ class _HomePageContentViewState extends State<HomePageContentView>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 40, vertical: 40),
+                            padding: const EdgeInsets.symmetric(horizontal: 40),
                             child: BlocBuilder<HomePageCubit, HomePageState>(
                               builder: (context, state) {
-                                return ListView.separated(
+                                return ListView.builder(
                                   shrinkWrap: true,
-                                  separatorBuilder: (context, index) {
-                                    return const SizedBox(
-                                      height: 20,
-                                    );
-                                  },
                                   itemCount: state.list.length,
                                   itemBuilder: (context, index) {
                                     if (state.list[index].fotbalek.brand ==
@@ -129,6 +134,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                                         name: state.list[index].name,
                                         rating: state.list[index].rating,
                                         adress: state.list[index].adress,
+                                        imageUrl: state.list[index].pubImage,
                                         index: index,
                                         callback: () {
                                           context.pushNamed(
@@ -149,17 +155,11 @@ class _HomePageContentViewState extends State<HomePageContentView>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 40, vertical: 40),
+                            padding: const EdgeInsets.symmetric(horizontal: 40),
                             child: BlocBuilder<HomePageCubit, HomePageState>(
                               builder: (context, state) {
-                                return ListView.separated(
+                                return ListView.builder(
                                   shrinkWrap: true,
-                                  separatorBuilder: (context, index) {
-                                    return const SizedBox(
-                                      height: 20,
-                                    );
-                                  },
                                   itemCount: state.list.length,
                                   itemBuilder: (context, index) {
                                     if (state.list[index].fotbalek.brand !=
@@ -170,6 +170,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                                         name: state.list[index].name,
                                         rating: state.list[index].rating,
                                         adress: state.list[index].adress,
+                                        imageUrl: state.list[index].pubImage,
                                         index: index,
                                         callback: () {
                                           context.pushNamed(

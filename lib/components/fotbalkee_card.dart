@@ -1,64 +1,91 @@
+import 'package:diplomka/theme/theme_colors.dart';
+import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
-  const CardWidget(
-      {super.key,
-      required this.name,
-      required this.rating,
-      required this.adress,
-      required this.index,
-      required this.callback});
+  const CardWidget({
+    super.key,
+    required this.name,
+    required this.rating,
+    required this.adress,
+    required this.index,
+    required this.callback,
+    required this.imageUrl,
+  });
 
   final String name;
   final double rating;
   final String adress;
   final int index;
+  final String imageUrl;
   final void Function() callback;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      child: GestureDetector(
-        onTap: callback,
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 244, 244, 244),
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Row(
-            children: [
-              SizedBox(
-                height: 100,
-                width: 100,
-                child: Image.network(
-                  'https://picsum.photos/200',
-                  errorBuilder: (context, error, stackTrace) {
-                    return const Placeholder();
-                  },
-                ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(name),
-                  Text(adress),
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                      ),
-                      Text('$rating')
-                    ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 20),
+      child: SizedBox(
+        height: 100,
+        child: GestureDetector(
+          onTap: callback,
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              color: ProjectColors.scoreboardCardColor,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(12),
+                      bottomLeft: Radius.circular(12)),
+                  child: SizedBox(
+                    height: 130,
+                    width: 130,
+                    child: Image.asset(
+                      imageUrl,
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Placeholder();
+                      },
+                    ),
                   ),
-                ],
-              )
-            ],
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      name,
+                      style: CustomTextStyles.regularTextBold,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          adress,
+                          style: CustomTextStyles.pubDetailStyle,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        Text(
+                          '$rating',
+                          style: CustomTextStyles.regularText,
+                        )
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),

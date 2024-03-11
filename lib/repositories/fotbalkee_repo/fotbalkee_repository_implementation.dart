@@ -28,12 +28,6 @@ class FotbalkeeRepositoryImplementation implements FotbalkeeRepository {
   }
 
   @override
-  updatePub(int id) {
-    // TODO: implement updatePub
-    throw UnimplementedError();
-  }
-
-  @override
   getByName(String tableName) {
     List<PubEntity> tables = [];
     for (var table in repo.listOfPubs) {
