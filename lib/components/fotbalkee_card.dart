@@ -3,14 +3,15 @@ import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
-  const CardWidget(
-      {super.key,
-      required this.name,
-      required this.rating,
-      required this.adress,
-      required this.index,
-      required this.callback,
-      required this.imageUrl});
+  const CardWidget({
+    super.key,
+    required this.name,
+    required this.rating,
+    required this.adress,
+    required this.index,
+    required this.callback,
+    required this.imageUrl,
+  });
 
   final String name;
   final double rating;

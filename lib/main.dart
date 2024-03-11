@@ -18,31 +18,3 @@ class MainApp extends StatelessWidget {
     );
   }
 }
-
-class FotbalkeeThemeExtension extends ThemeExtension<FotbalkeeThemeExtension> {
-  const FotbalkeeThemeExtension({required this.background});
-  final Color background;
-
-  @override
-  ThemeExtension<FotbalkeeThemeExtension> copyWith({Color? background}) =>
-      FotbalkeeThemeExtension(background: background ?? this.background);
-
-  @override
-  ThemeExtension<FotbalkeeThemeExtension> lerp(
-      covariant ThemeExtension<FotbalkeeThemeExtension>? other, double t) {
-    throw UnimplementedError();
-  }
-}
-
-Map<String, ThemeData> themes = {
-  'light': ThemeData(
-      scaffoldBackgroundColor: Colors.white,
-      extensions: const <ThemeExtension<dynamic>>[
-        FotbalkeeThemeExtension(background: Colors.blue)
-      ]),
-  'dark': ThemeData(
-      scaffoldBackgroundColor: Colors.black,
-      extensions: const <ThemeExtension<dynamic>>[
-        FotbalkeeThemeExtension(background: Colors.red)
-      ])
-};

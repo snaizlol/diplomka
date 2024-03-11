@@ -5,54 +5,47 @@ class MatchesMockupRepository {
   List<MatchEntity> list = [
     MatchEntity(
         teamOne: TeamEntity(
-            teamName: 'Team 1',
-            playerOneName: 'Michal',
-            playerTwoName: 'Patrik'),
+          teamName: 'Team 1',
+          playerOneName: 'Player 1',
+          playerTwoName: 'Player 2',
+        ),
         matchId: '0',
         teamOneGamesWon: 3,
         teamTwo: TeamEntity(
           teamName: 'Team 2',
-          playerOneName: 'Kristian',
-          playerTwoName: 'Tomas',
+          playerOneName: 'Player 1',
+          playerTwoName: 'Player 2',
         ),
         teamTwoGamesWon: 2),
     MatchEntity(
       teamOne: TeamEntity(
-        teamName: 'Marvel',
-        playerOneName: 'Nemam rad',
-        playerTwoName: 'Marvel',
+        teamName: 'Team 1',
+        playerOneName: 'Player 1',
+        playerTwoName: 'Player 2',
       ),
       matchId: '1',
       teamOneGamesWon: 1,
       teamTwo: TeamEntity(
-          teamName: 'D.C.', playerOneName: 'Batman je', playerTwoName: 'Hero'),
+        teamName: 'Team 2',
+        playerOneName: 'Player 1',
+        playerTwoName: 'Player 2',
+      ),
       teamTwoGamesWon: 1,
     ),
     MatchEntity(
       teamOne: TeamEntity(
-        teamName: 'Jedi',
-        playerOneName: 'Obi-Wan',
-        playerTwoName: 'Yoda',
+        teamName: 'Team 1',
+        playerOneName: 'Player 1',
+        playerTwoName: 'Player 2',
       ),
       matchId: '2',
       teamOneGamesWon: 4,
       teamTwo: TeamEntity(
-          teamName: 'Sith', playerOneName: 'Dooku', playerTwoName: 'Palpatine'),
-      teamTwoGamesWon: 3,
-    ),
-    MatchEntity(
-      teamOne: TeamEntity(
-        teamName: 'Beatles',
-        playerOneName: 'Lennon',
-        playerTwoName: 'McCartney',
+        teamName: 'Team 2',
+        playerOneName: 'Player 1',
+        playerTwoName: 'Player 2',
       ),
-      matchId: '3',
-      teamOneGamesWon: 1,
-      teamTwo: TeamEntity(
-          teamName: 'Stones',
-          playerOneName: 'Jagger',
-          playerTwoName: 'Richards'),
-      teamTwoGamesWon: 1,
+      teamTwoGamesWon: 3,
     ),
   ];
 }
