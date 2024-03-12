@@ -21,10 +21,4 @@ class HomePageCubit extends Cubit<HomePageState> {
       HomePageStateLoaded(list: pubs),
     );
   }
-
-  getTablesByBrand(String brand) {
-    List<PubEntity> tablesByBrand = repo.getByName(brand);
-
-    return tablesByBrand;
-  }
 }
