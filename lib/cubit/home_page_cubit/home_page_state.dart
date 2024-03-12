@@ -19,10 +19,3 @@ class HomePageStateLoaded extends HomePageState {
     required super.list,
   });
 }
-
-class HomePageStateError extends HomePageState {
-  HomePageStateError()
-      : super(
-          list: [],
-        );
-}

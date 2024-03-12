@@ -1,6 +1,6 @@
 import 'package:diplomka/entities/pub_entity.dart';
 
-abstract interface class FotbalkeeRepository {
+abstract interface class PubsRepository {
   getById(int id);
   getAll();
   addPub(PubEntity pub);

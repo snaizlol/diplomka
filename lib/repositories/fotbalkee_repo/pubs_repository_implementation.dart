@@ -1,9 +1,9 @@
 import 'package:diplomka/entities/pub_entity.dart';
-import 'package:diplomka/repositories/fotbalkee_repo/fotbalkee_repository.dart';
-import 'package:diplomka/repositories/fotbalkee_repo/mockup_fotbalkee.dart';
+import 'package:diplomka/repositories/fotbalkee_repo/pubs_repository.dart';
+import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
 
-class FotbalkeeRepositoryImplementation implements FotbalkeeRepository {
-  FotbalkeeRepositoryImplementation(this.repo);
+class PubsRepositoryImplementation implements PubsRepository {
+  PubsRepositoryImplementation(this.repo);
   final PubMockupRepository repo;
   @override
   getById(int id) {
