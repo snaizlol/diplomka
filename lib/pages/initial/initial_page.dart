@@ -44,7 +44,6 @@ class _InitialPageState extends State<InitialPage> {
               _currentIndex = index;
             },
           );
-
           _goToLocation(_currentIndex);
         },
       ),

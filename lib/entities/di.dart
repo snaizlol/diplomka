@@ -33,6 +33,12 @@ void register() {
       PubMockupRepository(),
     ),
   );
+  getIt.registerFactory<HomePageCubit>(
+    () => HomePageCubit(
+      getIt.get<PubsRepository>(),
+    ),
+  );
+
   getIt.registerSingleton<ArticlesMockupRepository>(ArticlesMockupRepository());
   getIt.registerSingleton<ArticlesRepository>(
       ArticlesRepositoryImplementation(ArticlesMockupRepository()));
@@ -53,11 +59,6 @@ void register() {
 
   getIt.registerFactory<DetailPageCubit>(
     () => DetailPageCubit(
-      getIt.get<PubsRepository>(),
-    ),
-  );
-  getIt.registerFactory<HomePageCubit>(
-    () => HomePageCubit(
       getIt.get<PubsRepository>(),
     ),
   );
