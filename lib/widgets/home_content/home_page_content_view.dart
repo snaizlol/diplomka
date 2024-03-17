@@ -33,10 +33,10 @@ class _HomePageContentViewState extends State<HomePageContentView>
     return BlocBuilder<HomePageCubit, HomePageState>(
       builder: (context, state) {
         if (state is HomePageStateLoading) {
-          const Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
-        } else if (state is HomePageStateLoaded) {
+        } else {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: ProjectColors.headerColor,
@@ -48,7 +48,6 @@ class _HomePageContentViewState extends State<HomePageContentView>
               ),
             ),
             body: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 TabBar(
                   controller: tabController,
@@ -86,105 +85,86 @@ class _HomePageContentViewState extends State<HomePageContentView>
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 40),
-                        child: BlocBuilder<HomePageCubit, HomePageState>(
-                          builder: (context, state) {
-                            return ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: state.list.length,
-                              itemBuilder: (context, index) {
-                                if (state.list[index].fotbalek.brand ==
-                                    tabBarNames[0]) {
-                                  return CardWidget(
-                                    name: state.list[index].name,
-                                    rating: state.list[index].rating,
-                                    adress: state.list[index].adress,
-                                    imageUrl: state.list[index].pubImage,
-                                    index: index,
-                                    callback: () {
-                                      context.pushNamed(
-                                        DetailPage.routeName,
-                                        pathParameters: {
-                                          'id':
-                                              (state.list[index].id).toString(),
-                                        },
-                                      );
+                        child: ListView.builder(
+                          itemCount: state.list.length,
+                          itemBuilder: (context, index) {
+                            if (state.list[index].fotbalek.brand ==
+                                tabBarNames[0]) {
+                              return PubCardWidget(
+                                name: state.list[index].name,
+                                rating: state.list[index].rating,
+                                adress: state.list[index].adress,
+                                imageUrl: state.list[index].pubImage,
+                                callback: () {
+                                  context.pushNamed(
+                                    DetailPage.routeName,
+                                    pathParameters: {
+                                      'id': (state.list[index].id).toString(),
                                     },
                                   );
-                                } else {
-                                  return const SizedBox.shrink();
-                                }
-                              },
-                            );
+                                },
+                              );
+                            } else {
+                              return const SizedBox.shrink();
+                            }
                           },
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 40),
-                        child: BlocBuilder<HomePageCubit, HomePageState>(
-                          builder: (context, state) {
-                            return ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: state.list.length,
-                              itemBuilder: (context, index) {
-                                if (state.list[index].fotbalek.brand ==
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: state.list.length,
+                          itemBuilder: (context, index) {
+                            if (state.list[index].fotbalek.brand ==
+                                tabBarNames[1]) {
+                              return PubCardWidget(
+                                name: state.list[index].name,
+                                rating: state.list[index].rating,
+                                adress: state.list[index].adress,
+                                imageUrl: state.list[index].pubImage,
+                                callback: () {
+                                  context.pushNamed(
+                                    DetailPage.routeName,
+                                    pathParameters: {
+                                      'id': (state.list[index].id).toString(),
+                                    },
+                                  );
+                                },
+                              );
+                            } else {
+                              return const SizedBox.shrink();
+                            }
+                          },
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 40),
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: state.list.length,
+                          itemBuilder: (context, index) {
+                            if (state.list[index].fotbalek.brand !=
+                                    tabBarNames[0] &&
+                                state.list[index].fotbalek.brand !=
                                     tabBarNames[1]) {
-                                  return CardWidget(
-                                    name: state.list[index].name,
-                                    rating: state.list[index].rating,
-                                    adress: state.list[index].adress,
-                                    imageUrl: state.list[index].pubImage,
-                                    index: index,
-                                    callback: () {
-                                      context.pushNamed(
-                                        DetailPage.routeName,
-                                        pathParameters: {
-                                          'id':
-                                              (state.list[index].id).toString(),
-                                        },
-                                      );
+                              return PubCardWidget(
+                                name: state.list[index].name,
+                                rating: state.list[index].rating,
+                                adress: state.list[index].adress,
+                                imageUrl: state.list[index].pubImage,
+                                callback: () {
+                                  context.pushNamed(
+                                    DetailPage.routeName,
+                                    pathParameters: {
+                                      'id': (state.list[index].id).toString(),
                                     },
                                   );
-                                } else {
-                                  return const SizedBox.shrink();
-                                }
-                              },
-                            );
-                          },
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 40),
-                        child: BlocBuilder<HomePageCubit, HomePageState>(
-                          builder: (context, state) {
-                            return ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: state.list.length,
-                              itemBuilder: (context, index) {
-                                if (state.list[index].fotbalek.brand !=
-                                        tabBarNames[0] &&
-                                    state.list[index].fotbalek.brand !=
-                                        tabBarNames[1]) {
-                                  return CardWidget(
-                                    name: state.list[index].name,
-                                    rating: state.list[index].rating,
-                                    adress: state.list[index].adress,
-                                    imageUrl: state.list[index].pubImage,
-                                    index: index,
-                                    callback: () {
-                                      context.pushNamed(
-                                        DetailPage.routeName,
-                                        pathParameters: {
-                                          'id':
-                                              (state.list[index].id).toString(),
-                                        },
-                                      );
-                                    },
-                                  );
-                                } else {
-                                  return const SizedBox.shrink();
-                                }
-                              },
-                            );
+                                },
+                              );
+                            } else {
+                              return const SizedBox.shrink();
+                            }
                           },
                         ),
                       ),
@@ -195,9 +175,6 @@ class _HomePageContentViewState extends State<HomePageContentView>
             ),
           );
         }
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
       },
     );
   }

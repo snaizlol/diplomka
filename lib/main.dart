@@ -3,8 +3,8 @@ import 'package:diplomka/entities/router/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
   register();
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {

@@ -2,13 +2,12 @@ import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class CardWidget extends StatelessWidget {
-  const CardWidget({
+class PubCardWidget extends StatelessWidget {
+  const PubCardWidget({
     super.key,
     required this.name,
     required this.rating,
     required this.adress,
-    required this.index,
     required this.callback,
     required this.imageUrl,
   });
@@ -16,7 +15,6 @@ class CardWidget extends StatelessWidget {
   final String name;
   final double rating;
   final String adress;
-  final int index;
   final String imageUrl;
   final void Function() callback;
 

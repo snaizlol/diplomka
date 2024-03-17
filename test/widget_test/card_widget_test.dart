@@ -14,11 +14,10 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: CardWidget(
+            body: PubCardWidget(
               name: name,
               rating: rating,
               adress: address,
-              index: 0,
               imageUrl: imageUrl,
               callback: () {},
             ),
