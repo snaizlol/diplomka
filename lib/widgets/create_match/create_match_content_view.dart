@@ -52,17 +52,25 @@ class CreateMatchContentView extends StatelessWidget {
                           'Team name',
                           style: CustomTextStyles.regularText,
                         ),
-                        InputFieldWidget(teamOneName: teamOneName),
+                        InputFieldWidget(
+                          teamOneName: teamOneName,
+                          key: Key('teamOneName'),
+                        ),
                         const Text(
                           'Player 1',
                           style: CustomTextStyles.regularText,
                         ),
-                        InputFieldWidget(teamOneName: teamOnePlayer1),
+                        InputFieldWidget(
+                          teamOneName: teamOnePlayer1,
+                          key: Key('teamOnePlayer1'),
+                        ),
                         const Text(
                           'Player 2',
                           style: CustomTextStyles.regularText,
                         ),
-                        InputFieldWidget(teamOneName: teamOnePlayer2),
+                        InputFieldWidget(
+                            teamOneName: teamOnePlayer2,
+                            key: Key('teamOnePlayer2')),
                       ],
                     ),
                     const SizedBox(
@@ -82,17 +90,22 @@ class CreateMatchContentView extends StatelessWidget {
                           'Team name',
                           style: CustomTextStyles.regularText,
                         ),
-                        InputFieldWidget(teamOneName: teamTwoName),
+                        InputFieldWidget(
+                            teamOneName: teamTwoName, key: Key('teamTwoName')),
                         const Text(
                           'Player 1',
                           style: CustomTextStyles.regularText,
                         ),
-                        InputFieldWidget(teamOneName: teamTwoPlayer1),
+                        InputFieldWidget(
+                            teamOneName: teamTwoPlayer1,
+                            key: Key('teamTwoPlayer1')),
                         const Text(
                           'Player 2',
                           style: CustomTextStyles.regularText,
                         ),
-                        InputFieldWidget(teamOneName: teamTwoPlayer2),
+                        InputFieldWidget(
+                            teamOneName: teamTwoPlayer2,
+                            key: Key('teamTwoPlayer2')),
                       ],
                     ),
                   ],

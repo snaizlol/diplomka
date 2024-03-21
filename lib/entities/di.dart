@@ -18,7 +18,7 @@ import 'package:get_it/get_it.dart';
 
 GetIt getIt = GetIt.instance;
 
-void register() {
+Future<void> register() async {
   getIt.registerSingleton<PubMockupRepository>(
     PubMockupRepository(),
   );
