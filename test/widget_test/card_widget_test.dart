@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets(
-    'CardWidget displays correctly with all of its values',
+    'PubCardWidget displays correctly with all of its values',
     (WidgetTester tester) async {
       const String name = 'New Pub';
       const double rating = 4.0;
