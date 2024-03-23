@@ -15,13 +15,12 @@ class CreateMatchCubit extends Cubit<CreateMatchState> {
     emit(CreateMatchLoading());
   }
 
-  createMatch(TeamEntity teamOne, TeamEntity teamTwo) {
+  createMatch(
+      {required TeamEntity teamOne,
+      required TeamEntity teamTwo,
+      required int pubId}) {
     const uuid = Uuid();
     final newId = uuid.v4();
-    repo.createMatch(
-      teamOne,
-      teamTwo,
-      newId,
-    );
+    repo.createMatch(teamOne, teamTwo, newId, pubId);
   }
 }

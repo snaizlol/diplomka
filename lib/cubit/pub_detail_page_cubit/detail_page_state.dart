@@ -20,6 +20,7 @@ class DetailPageStateLoading extends DetailPageState {
             tableImages: [],
             cooks: false,
             beers: [],
+            pubNews: [],
             fotbalek: FotbalekEntity(brand: '', rating: 0, isFree: false),
           ),
         );
