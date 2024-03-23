@@ -7,6 +7,7 @@ environment:
   sdk: '>=3.2.2 <4.0.0'
 
 dependencies:
+  bloc_test: ^9.1.6
   dots_indicator: ^3.0.0
   flutter:
     sdk: flutter
@@ -22,6 +23,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  integration_test:
+    sdk: flutter
+  patrol: ^3.6.0
 
 flutter:
   uses-material-design: true  
@@ -60,13 +64,6 @@ flutter:
     - assets/images/woodoo_4.jpeg
     - assets/images/zazemi.jpeg
     - assets/images/zazemi_2.jpeg
-    
-    
-
-
-    
-
-
   fonts:
     - family: Roboto
       fonts:
@@ -80,3 +77,10 @@ flutter:
         - asset: fonts/Montserrat-Bold.ttf
         - asset: fonts/Montserrat-Medium.ttf
         - asset: fonts/Montserrat-Light.ttf
+patrol:
+  app_name: FootballApp
+  android:
+    package_name: com.example.diplomka
+  ios:
+    bundle_id: com.example.diplomka
+

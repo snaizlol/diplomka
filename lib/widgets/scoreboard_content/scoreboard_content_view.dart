@@ -40,7 +40,7 @@ class ScoreboardContentView extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.all(20),
-                            child: CardScoreboardWidget(
+                            child: ScoreboardCard(
                               index: index,
                               callBack: () {
                                 context.pushNamed(

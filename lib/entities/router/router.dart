@@ -6,25 +6,14 @@ import 'package:diplomka/pages/home/home_page.dart';
 import 'package:diplomka/pages/initial/initial_page.dart';
 import 'package:diplomka/pages/match_detail_page/match_detail_page.dart';
 import 'package:diplomka/pages/scoreboard/scoreboard_page.dart';
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppNavigation {
   AppNavigation._();
 
   static String initialRouter = '/home';
-
-  static final _rootNavigatorKey = GlobalKey<NavigatorState>();
-  static final _rootNavigatorHome =
-      GlobalKey<NavigatorState>(debugLabel: 'home');
-  static final _rootNavigatorScoreboard =
-      GlobalKey<NavigatorState>(debugLabel: 'scoreboard');
-  static final _rootNavigatorArticles =
-      GlobalKey<NavigatorState>(debugLabel: 'articles');
-
   static final GoRouter router = GoRouter(
     initialLocation: initialRouter,
-    navigatorKey: _rootNavigatorKey,
     routes: [
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
@@ -32,9 +21,8 @@ class AppNavigation {
             navigationShell: navigationShell,
           );
         },
-        branches: <StatefulShellBranch>[
+        branches: [
           StatefulShellBranch(
-            navigatorKey: _rootNavigatorScoreboard,
             routes: [
               GoRoute(
                 path: '/scoreboard',
@@ -67,7 +55,6 @@ class AppNavigation {
             ],
           ),
           StatefulShellBranch(
-            navigatorKey: _rootNavigatorHome,
             routes: [
               GoRoute(
                 path: '/home',
@@ -91,7 +78,6 @@ class AppNavigation {
             ],
           ),
           StatefulShellBranch(
-            navigatorKey: _rootNavigatorArticles,
             routes: [
               GoRoute(
                 path: '/articles',

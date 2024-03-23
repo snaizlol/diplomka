@@ -4,8 +4,8 @@ import 'package:diplomka/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CardScoreboardWidget extends StatelessWidget {
-  const CardScoreboardWidget({
+class ScoreboardCard extends StatelessWidget {
+  const ScoreboardCard({
     required this.index,
     required this.callBack,
     super.key,
