@@ -18,26 +18,16 @@ import 'package:get_it/get_it.dart';
 GetIt getIt = GetIt.instance;
 
 Future<void> register() async {
-  getIt.registerSingleton<PubMockupRepository>(
-    PubMockupRepository(),
-  );
+  getIt.registerSingleton<PubMockupRepository>(PubMockupRepository());
 
   getIt.registerSingleton<PubsRepository>(
-    PubsRepositoryImplementation(
-      PubMockupRepository(),
-    ),
+    PubsRepositoryImplementation(PubMockupRepository()),
   );
   getIt.registerSingleton<PubsRepositoryImplementation>(
-    PubsRepositoryImplementation(
-      PubMockupRepository(),
-    ),
+    PubsRepositoryImplementation(PubMockupRepository()),
   );
   getIt.registerFactory<HomePageCubit>(
-    () => HomePageCubit(
-      getIt.get<PubsRepository>(),
-    ),
-  );
-
+      () => HomePageCubit(getIt.get<PubsRepository>()));
   getIt.registerSingleton<ArticlesRepository>(
       ArticlesRepositoryImplementation());
   getIt.registerSingleton<MatchesMockupRepository>(
@@ -46,26 +36,16 @@ Future<void> register() async {
       MatchRepositoryImplementation(
           MatchesMockupRepository(PubMockupRepository()),
           PubMockupRepository()));
-
   getIt.registerSingleton<MatchesRepository>(MatchRepositoryImplementation(
-      MatchesMockupRepository(
-        PubMockupRepository(),
-      ),
-      PubMockupRepository()));
-
+      MatchesMockupRepository(PubMockupRepository()), PubMockupRepository()));
   getIt.registerFactory<CreateMatchCubit>(() => CreateMatchCubit(
       getIt.get<MatchesRepository>(), getIt.get<MatchesMockupRepository>()));
-
   getIt.registerFactory<MatchDetailCubit>(
       () => MatchDetailCubit(getIt.get<MatchesRepository>()));
   getIt.registerFactory<MatchCubit>(
       () => MatchCubit(getIt.get<MatchesRepository>()));
-
   getIt.registerFactory<DetailPageCubit>(
-    () => DetailPageCubit(
-      getIt.get<PubsRepository>(),
-    ),
-  );
+      () => DetailPageCubit(getIt.get<PubsRepository>()));
   getIt.registerFactory<ArticleDetailPageCubit>(
       () => ArticleDetailPageCubit(getIt.get<ArticlesRepository>()));
   getIt.registerFactory<ArticlesPageCubit>(
