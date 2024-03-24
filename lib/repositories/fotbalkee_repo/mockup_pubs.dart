@@ -1,14 +1,14 @@
-import 'package:diplomka/entities/article_entity.dart';
-import 'package:diplomka/entities/fotbalek_entity.dart';
-import 'package:diplomka/entities/pub_entity.dart';
-import 'package:diplomka/entities/table_entity.dart';
+import 'package:diplomka/entities/article.dart';
+import 'package:diplomka/entities/foosball.dart';
+import 'package:diplomka/entities/pub.dart';
+import 'package:diplomka/entities/beer.dart';
 
 class PubMockupRepository {
-  static List<PubEntity> listOfPubs = [
-    PubEntity(
+  static List<Pub> listOfPubs = [
+    Pub(
       id: 0,
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Klubovna Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -21,14 +21,14 @@ class PubMockupRepository {
       pubImage: 'assets/images/plzenka.jpeg',
       tableImages: ['assets/images/plzenka.jpeg', 'assets/images/dasen.jpeg'],
       beers: [
-        BeerEntity(price: 40, name: 'Kacov'),
-        BeerEntity(price: 50, name: 'Plzen'),
+        Beer(price: 40, name: 'Kacov'),
+        Beer(price: 50, name: 'Plzen'),
       ],
-      fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
+      foosball: Foosball(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Tecka Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -44,12 +44,12 @@ class PubMockupRepository {
         'assets/images/u_sadu_3.jpeg',
         'assets/images/u_sadu_4.jpeg'
       ],
-      beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
+      beers: [Beer(price: 40, name: 'Kozel')],
+      foosball: Foosball(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Woodoo Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -67,12 +67,12 @@ class PubMockupRepository {
         'assets/images/woodoo_3.jpeg',
         'assets/images/woodoo_4.jpeg'
       ],
-      beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
+      beers: [Beer(price: 40, name: 'Kozel')],
+      foosball: Foosball(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Oaza Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -90,12 +90,12 @@ class PubMockupRepository {
         'assets/images/oaza_3.jpeg',
         'assets/images/oaza_4.jpeg'
       ],
-      beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
+      beers: [Beer(price: 40, name: 'Kozel')],
+      foosball: Foosball(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Zazemi Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -108,12 +108,12 @@ class PubMockupRepository {
       pubImage: 'assets/images/zazemi.jpeg',
       tableImages: ['assets/images/zazemi.jpeg', 'assets/images/zazemi_2.jpeg'],
       cooks: false,
-      beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
+      beers: [Beer(price: 40, name: 'Kozel')],
+      foosball: Foosball(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Plzenka Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -129,12 +129,12 @@ class PubMockupRepository {
         'assets/images/plzenka.jpeg',
         'assets/images/plzenka_2.jpeg',
       ],
-      beers: [BeerEntity(price: 40, name: 'Kozel')],
-      fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
+      beers: [Beer(price: 40, name: 'Kozel')],
+      foosball: Foosball(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Famu Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -147,13 +147,12 @@ class PubMockupRepository {
       tableImages: ['assets/images/famu.jpeg', 'assets/images/famu2.jpeg'],
       rating: 3.8,
       cooks: false,
-      beers: [BeerEntity(price: 40, name: 'Hubertus')],
-      fotbalek:
-          FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
+      beers: [Beer(price: 40, name: 'Hubertus')],
+      foosball: Foosball(brand: 'Roberto Sport', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Nadrazka Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -170,15 +169,14 @@ class PubMockupRepository {
       rating: 4.9,
       cooks: false,
       beers: [
-        BeerEntity(price: 59, name: 'Plzen'),
-        BeerEntity(price: 40, name: 'Staropramen')
+        Beer(price: 59, name: 'Plzen'),
+        Beer(price: 40, name: 'Staropramen')
       ],
-      fotbalek:
-          FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
+      foosball: Foosball(brand: 'Roberto Sport', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'Vecernice Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -197,15 +195,14 @@ class PubMockupRepository {
       rating: 4.4,
       cooks: false,
       beers: [
-        BeerEntity(price: 59, name: 'Plzen'),
-        BeerEntity(price: 40, name: 'Staropramen')
+        Beer(price: 59, name: 'Plzen'),
+        Beer(price: 40, name: 'Staropramen')
       ],
-      fotbalek:
-          FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
+      foosball: Foosball(brand: 'Roberto Sport', rating: 4, isFree: false),
     ),
-    PubEntity(
+    Pub(
       pubNews: [
-        ArticleEntity(
+        Article(
             title: 'U sadu Championship',
             text: 'Lorem ipsum',
             imageUrl: 'https://picsum.photos/350/200/',
@@ -223,11 +220,8 @@ class PubMockupRepository {
       ],
       rating: 2.9,
       cooks: false,
-      beers: [
-        BeerEntity(price: 59, name: 'Plzen'),
-        BeerEntity(price: 60, name: 'Chric')
-      ],
-      fotbalek: FotbalekEntity(brand: 'Speedo sport', rating: 4, isFree: false),
+      beers: [Beer(price: 59, name: 'Plzen'), Beer(price: 60, name: 'Chric')],
+      foosball: Foosball(brand: 'Speedo sport', rating: 4, isFree: false),
     ),
   ];
 }

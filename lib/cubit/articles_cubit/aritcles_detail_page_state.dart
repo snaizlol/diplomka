@@ -1,15 +1,13 @@
-import 'package:diplomka/entities/article_entity.dart';
+import 'package:diplomka/entities/article.dart';
 
 class ArticleDetailPageState {
   ArticleDetailPageState({required this.article});
-  ArticleEntity article;
+  Article article;
 }
 
 class ArticleDetailPageLoading extends ArticleDetailPageState {
   ArticleDetailPageLoading()
-      : super(
-            article:
-                ArticleEntity(title: '', text: 'text', id: 0, imageUrl: ''));
+      : super(article: Article(title: '', text: 'text', id: 0, imageUrl: ''));
 }
 
 class ArticleDetailPageLoaded extends ArticleDetailPageState {

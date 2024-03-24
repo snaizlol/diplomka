@@ -1,9 +1,9 @@
-class FotbalekEntity {
+class Foosball {
   String brand;
-  int rating;
+  double rating;
   bool isFree;
 
-  FotbalekEntity({
+  Foosball({
     required this.brand,
     required this.rating,
     required this.isFree,

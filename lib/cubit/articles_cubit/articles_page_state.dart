@@ -1,10 +1,10 @@
-import 'package:diplomka/entities/article_entity.dart';
+import 'package:diplomka/entities/article.dart';
 
 class ArticlesPageState {}
 
 class ArticlesPageInit extends ArticlesPageState {
   ArticlesPageInit(this.list);
-  final List<ArticleEntity> list;
+  final List<Article> list;
 }
 
 class ArticlesPageLoading extends ArticlesPageState {
@@ -13,5 +13,5 @@ class ArticlesPageLoading extends ArticlesPageState {
 
 class ArticlesPageLoaded extends ArticlesPageState {
   ArticlesPageLoaded(this.list) : super();
-  final List<ArticleEntity> list;
+  final List<Article> list;
 }

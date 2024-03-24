@@ -1,8 +1,8 @@
-import 'package:diplomka/entities/article_entity.dart';
+import 'package:diplomka/entities/article.dart';
 
 class ArticlesMockupRepository {
-  List<ArticleEntity> list = [
-    ArticleEntity(
+  List<Article> list = [
+    Article(
       id: 0,
       title: 'Championship in NYC',
       imageUrl: 'https://picsum.photos/350/200/',

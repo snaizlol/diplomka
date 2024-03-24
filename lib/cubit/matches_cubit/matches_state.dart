@@ -1,8 +1,8 @@
-import 'package:diplomka/entities/match_entity.dart';
+import 'package:diplomka/entities/match.dart';
 
 class MatchState {
   MatchState({required this.list});
-  List<MatchEntity> list;
+  List<Match> list;
 }
 
 class MatchStateLoading extends MatchState {

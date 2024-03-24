@@ -1,8 +1,8 @@
-class BeerEntity {
+class Beer {
   int price;
   String name;
 
-  BeerEntity({
+  Beer({
     required this.price,
     required this.name,
   });

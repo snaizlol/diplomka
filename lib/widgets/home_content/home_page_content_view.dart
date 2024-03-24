@@ -88,7 +88,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                         child: ListView.builder(
                           itemCount: state.list.length,
                           itemBuilder: (context, index) {
-                            if (state.list[index].fotbalek.brand ==
+                            if (state.list[index].foosball.brand ==
                                 tabBarNames[0]) {
                               return PubCardWidget(
                                 name: state.list[index].name,
@@ -116,7 +116,7 @@ class _HomePageContentViewState extends State<HomePageContentView>
                           shrinkWrap: true,
                           itemCount: state.list.length,
                           itemBuilder: (context, index) {
-                            if (state.list[index].fotbalek.brand ==
+                            if (state.list[index].foosball.brand ==
                                 tabBarNames[1]) {
                               return PubCardWidget(
                                 name: state.list[index].name,
@@ -144,9 +144,9 @@ class _HomePageContentViewState extends State<HomePageContentView>
                           shrinkWrap: true,
                           itemCount: state.list.length,
                           itemBuilder: (context, index) {
-                            if (state.list[index].fotbalek.brand !=
+                            if (state.list[index].foosball.brand !=
                                     tabBarNames[0] &&
-                                state.list[index].fotbalek.brand !=
+                                state.list[index].foosball.brand !=
                                     tabBarNames[1]) {
                               return PubCardWidget(
                                 name: state.list[index].name,
