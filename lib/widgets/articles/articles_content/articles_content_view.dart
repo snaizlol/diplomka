@@ -39,6 +39,7 @@ class ArticlesContentView extends StatelessWidget {
                           'id': (state.list[index].id).toString()
                         },
                       );
+                      print(state.list[index].id);
                     },
                     imageUrl: 'https://picsum.photos/350/200/',
                     title: state.list[index].title,

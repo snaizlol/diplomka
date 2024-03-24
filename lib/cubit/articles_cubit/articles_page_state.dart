@@ -15,8 +15,3 @@ class ArticlesPageLoaded extends ArticlesPageState {
   ArticlesPageLoaded(this.list) : super();
   final List<ArticleEntity> list;
 }
-
-class ArticlesPageError extends ArticlesPageState {
-  ArticlesPageError(this.errorMessage) : super();
-  String errorMessage;
-}

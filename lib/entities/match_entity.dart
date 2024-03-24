@@ -16,12 +16,4 @@ class MatchEntity {
   TeamEntity teamTwo;
   String matchId;
   PubEntity pub;
-
-  getPubById(int pubId) {
-    if (pub.id == pubId) {
-      return pub;
-    } else {
-      throw Exception('Pub with id $pubId not found in this match.');
-    }
-  }
 }

@@ -40,11 +40,16 @@ class ArticleDetailsContentView extends StatelessWidget {
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(12),
-                      child: Image.network(
-                        state.article.imageUrl,
-                        errorBuilder: (context, error, stackTrace) {
-                          return const Placeholder();
-                        },
+                      child: SizedBox(
+                        height: 200,
+                        child: Center(
+                          child: Image.asset(
+                            'assets/images/championship.jpg',
+                            errorBuilder: (context, error, stackTrace) {
+                              return const Placeholder();
+                            },
+                          ),
+                        ),
                       ),
                     ),
                     const SizedBox(
