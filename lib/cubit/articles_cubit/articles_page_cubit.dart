@@ -1,5 +1,5 @@
 import 'package:diplomka/cubit/articles_cubit/articles_page_state.dart';
-import 'package:diplomka/entities/article_entity.dart';
+import 'package:diplomka/entities/article.dart';
 import 'package:diplomka/repositories/articles_repo/aritcles_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,7 +13,7 @@ class ArticlesPageCubit extends Cubit<ArticlesPageState> {
       ArticlesPageLoading(),
     );
 
-    List<ArticleEntity> articles = repo.getArticleAll();
+    List<Article> articles = repo.getArticleAll();
 
     emit(
       ArticlesPageLoaded(articles),

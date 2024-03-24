@@ -89,7 +89,7 @@ class DetailPageContentView extends StatelessWidget {
                                 style: CustomTextStyles.regularTextBold,
                               ),
                               Text(
-                                state.pub.fotbalek.brand,
+                                state.pub.foosball.brand,
                                 style: CustomTextStyles.regularText,
                               )
                             ],

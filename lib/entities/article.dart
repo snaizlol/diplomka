@@ -1,5 +1,5 @@
-class ArticleEntity {
-  ArticleEntity({
+class Article {
+  Article({
     required this.title,
     required this.text,
     required this.imageUrl,

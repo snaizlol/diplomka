@@ -1,6 +1,6 @@
-import 'package:diplomka/entities/pub_entity.dart';
+import 'package:diplomka/entities/pub.dart';
 
 abstract interface class PubsRepository {
-  PubEntity getById(int id);
-  List<PubEntity> getAll();
+  Pub getById(int id);
+  List<Pub> getAll();
 }

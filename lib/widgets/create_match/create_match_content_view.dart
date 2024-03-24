@@ -1,6 +1,6 @@
 import 'package:diplomka/components/create_team_input_field.dart';
 import 'package:diplomka/cubit/create_match_cubit/create_match_cubit.dart';
-import 'package:diplomka/entities/team_entity.dart';
+import 'package:diplomka/entities/team.dart';
 import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
 import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
@@ -160,12 +160,12 @@ class _CreateMatchContentViewState extends State<CreateMatchContentView> {
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           context.read<CreateMatchCubit>().createMatch(
-                              teamOne: TeamEntity(
+                              teamOne: Team(
                                 teamName: teamOneName.text,
                                 playerOneName: teamOnePlayer1.text,
                                 playerTwoName: teamTwoPlayer2.text,
                               ),
-                              teamTwo: TeamEntity(
+                              teamTwo: Team(
                                 teamName: teamTwoName.text,
                                 playerOneName: teamTwoPlayer1.text,
                                 playerTwoName: teamTwoPlayer2.text,

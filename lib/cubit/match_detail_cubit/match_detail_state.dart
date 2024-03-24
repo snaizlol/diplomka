@@ -1,14 +1,14 @@
-import 'package:diplomka/entities/fotbalek_entity.dart';
-import 'package:diplomka/entities/match_entity.dart';
-import 'package:diplomka/entities/pub_entity.dart';
-import 'package:diplomka/entities/team_entity.dart';
+import 'package:diplomka/entities/foosball.dart';
+import 'package:diplomka/entities/match.dart';
+import 'package:diplomka/entities/pub.dart';
+import 'package:diplomka/entities/team.dart';
 
 class MatchDetailState {
   MatchDetailState(
       {required this.matchInfo,
       required this.teamOneWins,
       required this.teamTwoWins});
-  MatchEntity matchInfo;
+  Match matchInfo;
   int teamOneWins;
   int teamTwoWins;
 }
@@ -16,8 +16,8 @@ class MatchDetailState {
 class MatchDetailLoading extends MatchDetailState {
   MatchDetailLoading()
       : super(
-          matchInfo: MatchEntity(
-            pub: PubEntity(
+          matchInfo: Match(
+            pub: Pub(
               id: 0,
               name: '',
               adress: '',
@@ -27,14 +27,12 @@ class MatchDetailLoading extends MatchDetailState {
               cooks: false,
               beers: [],
               pubNews: [],
-              fotbalek: FotbalekEntity(brand: '', rating: 0, isFree: false),
+              foosball: Foosball(brand: '', rating: 0, isFree: false),
             ),
-            teamOne:
-                TeamEntity(teamName: '', playerOneName: '', playerTwoName: ''),
+            teamOne: Team(teamName: '', playerOneName: '', playerTwoName: ''),
             matchId: '0',
             teamOneGamesWon: 0,
-            teamTwo:
-                TeamEntity(teamName: '', playerOneName: '', playerTwoName: ''),
+            teamTwo: Team(teamName: '', playerOneName: '', playerTwoName: ''),
             teamTwoGamesWon: 0,
           ),
           teamOneWins: 0,
@@ -52,8 +50,8 @@ class MatchDetailLoaded extends MatchDetailState {
 class TeamOneScores extends MatchDetailState {
   TeamOneScores({required super.teamOneWins, required super.teamTwoWins})
       : super(
-          matchInfo: MatchEntity(
-            pub: PubEntity(
+          matchInfo: Match(
+            pub: Pub(
               id: 0,
               name: '',
               adress: '',
@@ -63,14 +61,12 @@ class TeamOneScores extends MatchDetailState {
               cooks: false,
               beers: [],
               pubNews: [],
-              fotbalek: FotbalekEntity(brand: '', rating: 0, isFree: false),
+              foosball: Foosball(brand: '', rating: 0, isFree: false),
             ),
-            teamOne:
-                TeamEntity(teamName: '', playerOneName: '', playerTwoName: ''),
+            teamOne: Team(teamName: '', playerOneName: '', playerTwoName: ''),
             matchId: '0',
             teamOneGamesWon: 0,
-            teamTwo:
-                TeamEntity(teamName: '', playerOneName: '', playerTwoName: ''),
+            teamTwo: Team(teamName: '', playerOneName: '', playerTwoName: ''),
             teamTwoGamesWon: 0,
           ),
         );

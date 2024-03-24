@@ -1,9 +1,9 @@
-import 'package:diplomka/entities/team_entity.dart';
+import 'package:diplomka/entities/team.dart';
 
 abstract interface class MatchesRepository {
   getMatches() {}
   getMatchById(String id) {}
-  createMatch(TeamEntity team1, TeamEntity team2, String matchId, int pubId) {}
+  createMatch(Team team1, Team team2, String matchId, int pubId) {}
   updateScorePlus(String id, int teamNumber) {}
   updateScoreMinus(String id, int teamNumber) {}
   deleteMatch(String id) {}

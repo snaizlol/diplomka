@@ -1,5 +1,5 @@
 import 'package:diplomka/cubit/match_detail_cubit/match_detail_state.dart';
-import 'package:diplomka/entities/match_entity.dart';
+import 'package:diplomka/entities/match.dart';
 import 'package:diplomka/repositories/matches_repo/matches_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -9,7 +9,7 @@ class MatchDetailCubit extends Cubit<MatchDetailState> {
   load(String id) {
     emit(MatchDetailLoading());
 
-    final MatchEntity getMatchInfo = repo.getMatchById(id);
+    final Match getMatchInfo = repo.getMatchById(id);
 
     emit(MatchDetailLoaded(
         matchInfo: getMatchInfo,
@@ -18,7 +18,7 @@ class MatchDetailCubit extends Cubit<MatchDetailState> {
   }
 
   addWin(String id, int team) {
-    final MatchEntity getMatchInfo = repo.getMatchById(id);
+    final Match getMatchInfo = repo.getMatchById(id);
     if (team == 1) {
       repo.updateScorePlus(id, team);
       state.teamOneWins++;
@@ -37,7 +37,7 @@ class MatchDetailCubit extends Cubit<MatchDetailState> {
   }
 
   removeWin(String id, int team) {
-    final MatchEntity getMatchInfo = repo.getMatchById(id);
+    final Match getMatchInfo = repo.getMatchById(id);
     if (team == 1) {
       if (getMatchInfo.teamOneGamesWon > 0) {
         repo.updateScoreMinus(id, team);

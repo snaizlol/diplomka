@@ -1,8 +1,8 @@
-import 'package:diplomka/entities/pub_entity.dart';
-import 'package:diplomka/entities/team_entity.dart';
+import 'package:diplomka/entities/pub.dart';
+import 'package:diplomka/entities/team.dart';
 
-class MatchEntity {
-  MatchEntity({
+class Match {
+  Match({
     required this.teamOne,
     required this.matchId,
     required this.teamOneGamesWon,
@@ -12,8 +12,8 @@ class MatchEntity {
   });
   int teamOneGamesWon;
   int teamTwoGamesWon;
-  TeamEntity teamOne;
-  TeamEntity teamTwo;
+  Team teamOne;
+  Team teamTwo;
   String matchId;
-  PubEntity pub;
+  Pub pub;
 }

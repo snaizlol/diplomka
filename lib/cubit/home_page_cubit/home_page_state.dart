@@ -1,10 +1,10 @@
-import 'package:diplomka/entities/pub_entity.dart';
+import 'package:diplomka/entities/pub.dart';
 
 class HomePageState {
   HomePageState({
     required this.list,
   });
-  final List<PubEntity> list;
+  final List<Pub> list;
 }
 
 class HomePageStateLoading extends HomePageState {

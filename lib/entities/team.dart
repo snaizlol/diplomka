@@ -1,5 +1,5 @@
-class TeamEntity {
-  TeamEntity(
+class Team {
+  Team(
       {required this.teamName,
       required this.playerOneName,
       required this.playerTwoName});

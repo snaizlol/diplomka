@@ -1,5 +1,5 @@
-import 'package:diplomka/entities/match_entity.dart';
-import 'package:diplomka/entities/team_entity.dart';
+import 'package:diplomka/entities/match.dart';
+import 'package:diplomka/entities/team.dart';
 import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
 import 'package:diplomka/repositories/matches_repo/matches_repository.dart';
 import 'package:diplomka/repositories/matches_repo/mockup_matches.dart';
@@ -36,13 +36,13 @@ class MatchRepositoryImplementation implements MatchesRepository {
   }
 
   @override
-  createMatch(TeamEntity team1, TeamEntity team2, String matchId, int pubId) {
+  createMatch(Team team1, Team team2, String matchId, int pubId) {
     final pub = PubMockupRepository.listOfPubs
         .where((element) => element.id == pubId)
         .first;
 
     matchesMockupRepository.list.add(
-      MatchEntity(
+      Match(
           teamOne: team1,
           matchId: matchId,
           teamOneGamesWon: 0,
