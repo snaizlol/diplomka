@@ -1,11 +1,9 @@
 import 'package:diplomka/entities/article.dart';
 import 'package:diplomka/repositories/articles_repo/aritcles_repository.dart';
-import 'package:diplomka/repositories/articles_repo/mockup_articles.dart';
 import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
 
 class ArticlesRepositoryImplementation implements ArticlesRepository {
-  ArticlesRepositoryImplementation(this.repo);
-  final ArticlesMockupRepository repo;
+  ArticlesRepositoryImplementation();
   @override
   getArticleAll() {
     final data = <Article>[];

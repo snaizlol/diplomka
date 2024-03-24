@@ -7,7 +7,6 @@ import 'package:diplomka/cubit/match_detail_cubit/match_detail_cubit.dart';
 import 'package:diplomka/cubit/matches_cubit/matches_cubit.dart';
 import 'package:diplomka/repositories/articles_repo/aritcles_repository.dart';
 import 'package:diplomka/repositories/articles_repo/articles_repository_implementation.dart';
-import 'package:diplomka/repositories/articles_repo/mockup_articles.dart';
 import 'package:diplomka/repositories/fotbalkee_repo/pubs_repository.dart';
 import 'package:diplomka/repositories/fotbalkee_repo/pubs_repository_implementation.dart';
 import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
@@ -39,9 +38,8 @@ Future<void> register() async {
     ),
   );
 
-  getIt.registerSingleton<ArticlesMockupRepository>(ArticlesMockupRepository());
   getIt.registerSingleton<ArticlesRepository>(
-      ArticlesRepositoryImplementation(ArticlesMockupRepository()));
+      ArticlesRepositoryImplementation());
   getIt.registerSingleton<MatchesMockupRepository>(
       MatchesMockupRepository(PubMockupRepository()));
   getIt.registerSingleton<MatchRepositoryImplementation>(
