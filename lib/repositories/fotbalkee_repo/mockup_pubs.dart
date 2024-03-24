@@ -1,11 +1,19 @@
+import 'package:diplomka/entities/article_entity.dart';
 import 'package:diplomka/entities/fotbalek_entity.dart';
 import 'package:diplomka/entities/pub_entity.dart';
 import 'package:diplomka/entities/table_entity.dart';
 
 class PubMockupRepository {
-  List<PubEntity> listOfPubs = [
+  static List<PubEntity> listOfPubs = [
     PubEntity(
       id: 0,
+      pubNews: [
+        ArticleEntity(
+            title: 'Klubovna Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 0)
+      ],
       name: 'Klubovna',
       adress: 'Generala Piky',
       rating: 4,
@@ -19,6 +27,13 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'Tecka Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 1)
+      ],
       id: 1,
       name: 'Tecka',
       adress: 'Americka',
@@ -33,6 +48,13 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'Woodoo Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 2)
+      ],
       id: 2,
       name: 'Woodoo',
       adress: 'Zizkovska',
@@ -49,6 +71,13 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'Oaza Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 3)
+      ],
       id: 3,
       name: 'Oaza',
       adress: 'Thakurova',
@@ -65,6 +94,13 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'Zazemi Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 4)
+      ],
       id: 4,
       name: 'Zazemi',
       adress: 'Michalska',
@@ -76,6 +112,13 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Leonhaart', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'Plzenka Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 5)
+      ],
       id: 5,
       name: 'Plzenka',
       adress: 'Hermanova',
@@ -90,6 +133,13 @@ class PubMockupRepository {
       fotbalek: FotbalekEntity(brand: 'Rosengaart', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'Famu Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 6)
+      ],
       id: 6,
       name: 'Famu',
       adress: 'Smetanovo nabrezi 2',
@@ -102,6 +152,13 @@ class PubMockupRepository {
           FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'Nadrazka Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 7)
+      ],
       id: 7,
       name: 'Nadrazka',
       adress: 'Dejvicka',
@@ -120,6 +177,13 @@ class PubMockupRepository {
           FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'Vecernice Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 8)
+      ],
       id: 8,
       name: 'Vecernice',
       adress: 'Ovenecka',
@@ -140,6 +204,13 @@ class PubMockupRepository {
           FotbalekEntity(brand: 'Roberto Sport', rating: 4, isFree: false),
     ),
     PubEntity(
+      pubNews: [
+        ArticleEntity(
+            title: 'U sadu Championship',
+            text: 'Lorem ipsum',
+            imageUrl: 'https://picsum.photos/350/200/',
+            id: 9)
+      ],
       id: 9,
       name: 'U Sadu',
       adress: 'Skroupovo namesti',

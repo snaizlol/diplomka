@@ -26,11 +26,16 @@ class ArticleCard extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.network(
-                  imageUrl,
-                  errorBuilder: (context, error, stackTrace) {
-                    return const Placeholder();
-                  },
+                child: SizedBox(
+                  height: 200,
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/championship.jpg',
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Placeholder();
+                      },
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(

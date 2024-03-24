@@ -6,13 +6,15 @@ class PubsRepositoryImplementation implements PubsRepository {
   final PubMockupRepository repo;
   @override
   getById(int id) {
-    final pub = repo.listOfPubs.where((element) => element.id == id).first;
+    final pub = PubMockupRepository.listOfPubs
+        .where((element) => element.id == id)
+        .first;
     return pub;
   }
 
   @override
   getAll() {
-    final data = repo.listOfPubs;
+    final data = PubMockupRepository.listOfPubs;
     return data;
   }
 }

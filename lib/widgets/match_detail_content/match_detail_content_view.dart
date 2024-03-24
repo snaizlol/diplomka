@@ -30,6 +30,10 @@ class MatchDetailContentView extends StatelessWidget {
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text(
+                'Stadium ${state.matchInfo.pub.name}',
+                style: CustomTextStyles.header,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [

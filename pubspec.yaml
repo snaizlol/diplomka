@@ -64,6 +64,7 @@ flutter:
     - assets/images/woodoo_4.jpeg
     - assets/images/zazemi.jpeg
     - assets/images/zazemi_2.jpeg
+    - assets/images/championship.jpg
   fonts:
     - family: Roboto
       fonts:

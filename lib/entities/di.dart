@@ -42,12 +42,18 @@ Future<void> register() async {
   getIt.registerSingleton<ArticlesMockupRepository>(ArticlesMockupRepository());
   getIt.registerSingleton<ArticlesRepository>(
       ArticlesRepositoryImplementation(ArticlesMockupRepository()));
-  getIt.registerSingleton<MatchesMockupRepository>(MatchesMockupRepository());
+  getIt.registerSingleton<MatchesMockupRepository>(
+      MatchesMockupRepository(PubMockupRepository()));
   getIt.registerSingleton<MatchRepositoryImplementation>(
-      MatchRepositoryImplementation(MatchesMockupRepository()));
+      MatchRepositoryImplementation(
+          MatchesMockupRepository(PubMockupRepository()),
+          PubMockupRepository()));
 
-  getIt.registerSingleton<MatchesRepository>(
-      MatchRepositoryImplementation(MatchesMockupRepository()));
+  getIt.registerSingleton<MatchesRepository>(MatchRepositoryImplementation(
+      MatchesMockupRepository(
+        PubMockupRepository(),
+      ),
+      PubMockupRepository()));
 
   getIt.registerFactory<CreateMatchCubit>(() => CreateMatchCubit(
       getIt.get<MatchesRepository>(), getIt.get<MatchesMockupRepository>()));
