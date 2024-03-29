@@ -1,6 +1,6 @@
 import 'package:diplomka/entities/match.dart';
 import 'package:diplomka/entities/team.dart';
-import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
+import 'package:diplomka/repositories/pubs_repo/mockup_pubs.dart';
 
 class MatchesMockupRepository {
   MatchesMockupRepository(this.pubMockupRepository);

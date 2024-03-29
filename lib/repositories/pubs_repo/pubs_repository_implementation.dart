@@ -1,5 +1,5 @@
-import 'package:diplomka/repositories/fotbalkee_repo/pubs_repository.dart';
-import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
+import 'package:diplomka/repositories/pubs_repo/pubs_repository.dart';
+import 'package:diplomka/repositories/pubs_repo/mockup_pubs.dart';
 
 class PubsRepositoryImplementation implements PubsRepository {
   PubsRepositoryImplementation(this.repo);
