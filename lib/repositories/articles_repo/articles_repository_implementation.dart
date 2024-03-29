@@ -1,6 +1,6 @@
 import 'package:diplomka/entities/article.dart';
 import 'package:diplomka/repositories/articles_repo/aritcles_repository.dart';
-import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
+import 'package:diplomka/repositories/pubs_repo/mockup_pubs.dart';
 
 class ArticlesRepositoryImplementation implements ArticlesRepository {
   ArticlesRepositoryImplementation();

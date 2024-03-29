@@ -1,7 +1,7 @@
 import 'package:diplomka/components/create_team_input_field.dart';
 import 'package:diplomka/cubit/create_match_cubit/create_match_cubit.dart';
 import 'package:diplomka/entities/team.dart';
-import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
+import 'package:diplomka/repositories/pubs_repo/mockup_pubs.dart';
 import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';

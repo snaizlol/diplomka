@@ -1,6 +1,6 @@
 import 'package:diplomka/entities/match.dart';
 import 'package:diplomka/entities/team.dart';
-import 'package:diplomka/repositories/fotbalkee_repo/mockup_pubs.dart';
+import 'package:diplomka/repositories/pubs_repo/mockup_pubs.dart';
 import 'package:diplomka/repositories/matches_repo/matches_repository.dart';
 import 'package:diplomka/repositories/matches_repo/mockup_matches.dart';
 
