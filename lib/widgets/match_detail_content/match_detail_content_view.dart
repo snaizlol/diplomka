@@ -12,6 +12,8 @@ class MatchDetailContentView extends StatelessWidget {
   final String id;
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ProjectColors.headerColor,
@@ -34,28 +36,39 @@ class MatchDetailContentView extends StatelessWidget {
                 'Stadium ${state.matchInfo.pub.name}',
                 style: CustomTextStyles.header,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Center(
-                      child: Text(
-                        state.matchInfo.teamOne.teamName,
-                        maxLines: 2,
-                        style: const TextStyle(fontSize: 24),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: (screenWidth / 2) - 50,
+                      child: Center(
+                        child: Text(
+                          state.matchInfo.teamOne.teamName,
+                          maxLines: 2,
+                          style: const TextStyle(fontSize: 24),
+                        ),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    child: Center(
-                      child: Text(
-                        state.matchInfo.teamTwo.teamName,
-                        style: const TextStyle(fontSize: 24),
-                        maxLines: 2,
+                    const SizedBox(
+                      width: 50,
+                    ),
+                    SizedBox(
+                      width: (screenWidth / 2) - 50,
+                      child: Center(
+                        child: Text(
+                          state.matchInfo.teamTwo.teamName,
+                          style: const TextStyle(fontSize: 24),
+                          maxLines: 2,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 30,
