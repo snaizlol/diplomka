@@ -1,15 +1,27 @@
 import 'package:diplomka/entities/article.dart';
+import 'package:equatable/equatable.dart';
 
-class ArticleDetailPageState {
-  ArticleDetailPageState({required this.article});
-  Article article;
+class ArticleDetailPageState extends Equatable {
+  const ArticleDetailPageState({required this.article});
+  final Article article;
+
+  @override
+  List<Object?> get props => [article];
 }
 
 class ArticleDetailPageLoading extends ArticleDetailPageState {
   ArticleDetailPageLoading()
       : super(article: Article(title: '', text: 'text', id: 0, imageUrl: ''));
+       @override
+  List<Object?> get props {
+    return [];
+  }
 }
 
 class ArticleDetailPageLoaded extends ArticleDetailPageState {
-  ArticleDetailPageLoaded({required super.article});
+  const ArticleDetailPageLoaded({required super.article});
+   @override
+  List<Object?> get props {
+    return [];
+  }
 }

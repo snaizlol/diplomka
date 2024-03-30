@@ -36,7 +36,7 @@ class MatchDetailContentView extends StatelessWidget {
                 'Stadium ${state.matchInfo.pub.name}',
                 style: CustomTextStyles.header,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Padding(
