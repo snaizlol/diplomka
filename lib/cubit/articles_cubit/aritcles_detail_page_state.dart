@@ -12,8 +12,16 @@ class ArticleDetailPageState extends Equatable {
 class ArticleDetailPageLoading extends ArticleDetailPageState {
   ArticleDetailPageLoading()
       : super(article: Article(title: '', text: 'text', id: 0, imageUrl: ''));
+       @override
+  List<Object?> get props {
+    return [];
+  }
 }
 
 class ArticleDetailPageLoaded extends ArticleDetailPageState {
   const ArticleDetailPageLoaded({required super.article});
+   @override
+  List<Object?> get props {
+    return [];
+  }
 }
