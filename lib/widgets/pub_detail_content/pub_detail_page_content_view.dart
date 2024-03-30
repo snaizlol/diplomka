@@ -4,7 +4,6 @@ import 'package:diplomka/theme/theme_colors.dart';
 import 'package:diplomka/theme/theme_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:insta_image_viewer/insta_image_viewer.dart';
 
 class DetailPageContentView extends StatelessWidget {
   const DetailPageContentView({super.key});
@@ -116,13 +115,21 @@ class DetailPageContentView extends StatelessWidget {
                               shrinkWrap: true,
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
-                                return InstaImageViewer(
+                                return GestureDetector(
                                   child: ClipRRect(
                                     borderRadius: const BorderRadius.all(
                                         Radius.circular(12)),
                                     child: Image.asset(
                                         state.pub.tableImages[index]),
                                   ),
+                                  onTap: () {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (_) {
+                                      return TablePictureDetail(
+                                        imageUrl: state.pub.tableImages[index],
+                                      );
+                                    }));
+                                  },
                                 );
                               },
                             ),
@@ -139,6 +146,31 @@ class DetailPageContentView extends StatelessWidget {
           },
         );
       },
+    );
+  }
+}
+
+class TablePictureDetail extends StatelessWidget {
+  const TablePictureDetail({super.key, required this.imageUrl});
+
+  final String imageUrl;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(color: Colors.white),
+      ),
+      backgroundColor: Colors.black,
+      body: GestureDetector(
+        child: Center(
+          child: Hero(tag: 'imageHero', child: Image.asset(imageUrl)),
+        ),
+        onTap: () {
+          Navigator.pop(context);
+        },
+      ),
     );
   }
 }

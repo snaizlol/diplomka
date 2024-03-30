@@ -1,6 +1,6 @@
 import 'package:diplomka/cubit/pub_detail_page_cubit/detail_page_cubit.dart';
 import 'package:diplomka/entities/di.dart';
-import 'package:diplomka/widgets/detail_content/detail_page_content_view.dart';
+import 'package:diplomka/widgets/pub_detail_content/pub_detail_page_content_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

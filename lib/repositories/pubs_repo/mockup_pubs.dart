@@ -89,10 +89,9 @@ class PubMockupRepository {
       cooks: false,
       pubImage: 'assets/images/oaza.jpeg',
       tableImages: [
-        'assets/images/oaza.jpeg',
-        'assets/images/oaza_2.jpeg',
         'assets/images/oaza_3.jpeg',
-        'assets/images/oaza_4.jpeg'
+        'assets/images/oaza_4.jpeg',
+        'assets/images/oaza_2.jpeg',
       ],
       beers: [Beer(price: 40, name: 'Kozel')],
       foosball: Foosball(brand: 'Leonhaart', rating: 4, isFree: false),
