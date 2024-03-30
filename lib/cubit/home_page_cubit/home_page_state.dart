@@ -19,7 +19,7 @@ class HomePageStateLoading extends HomePageState {
 }
 
 class HomePageStateLoaded extends HomePageState {
-  HomePageStateLoaded({
+  const HomePageStateLoaded({
     required super.list,
   });
 }
